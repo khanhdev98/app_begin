@@ -4,8 +4,7 @@ import 'package:data/service/author_service.dart';
 import 'package:dio/dio.dart';
 
 class AuthorServiceImpl implements AuthorService{
-  AuthorServiceImpl(this._dio);
-  final Dio _dio;
+  AuthorServiceImpl();
 
   @override
   Future<TokenModel> checkToken() {
