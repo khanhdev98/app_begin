@@ -6,7 +6,7 @@ const _vi = Locale('vi');
 class L10n {
   L10n._();
 
-  static L10n _instance = L10n._();
+  static final L10n _instance = L10n._();
 
   static L10n get I => _instance;
 
