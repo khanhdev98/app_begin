@@ -6,6 +6,7 @@ import 'package:widget/component/extensions/collection_extention.dart';
 import 'package:widget/di/auth_router.dart';
 
 import 'package:widget/component/flutter_easyloading-3.0.5/lib/flutter_easyloading.dart';
+import '../../component/app_date_picker/show_bottom_date_picker.dart';
 import '../../component/text_input/app_input.dart';
 import '../../component/validate/validate.dart';
 import '../../component/widget/language_select.dart';
@@ -22,32 +23,39 @@ class _SignInScreenState extends State<SignInScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _controllerAcc = TextEditingController();
   final TextEditingController _controllerPass = TextEditingController();
+  final GlobalKey<AppInputState> _birthDayKey = GlobalKey<AppInputState>();
+  final TextEditingController _birthDayController = TextEditingController();
+  late Iterable<DateTime?> _birthDay;
 
   FocusBlocCubit get focusBlocCubit => context.read();
 
   FocusNode? get focusEmail => focusBlocCubit.focusNodes.getOrNull(0);
 
   FocusNode? get focusPassword => focusBlocCubit.focusNodes.getOrNull(1);
-  final List<Map<String, String>> users = [
+  final List<Map<String, dynamic>> users = [
     {
       "id": "1",
       "acc": "khanh@gmail.com",
       "pass": "123456",
+      "birthDay": DateTime(1998, 4,21),
     },
     {
       "id": "2",
       "acc": "minh@gmail.com",
       "pass": "123456",
+      "birthDay": DateTime(1998, 4,21),
     },
     {
       "id": "3",
       "acc": "huy@gmail.com",
       "pass": "123456",
+      "birthDay": DateTime(1998, 4,21),
     },
     {
       "id": "4",
       "acc": "nam@gmail.com",
       "pass": "123456",
+      "birthDay": DateTime(1998, 4,21),
     },
   ];
 
@@ -113,6 +121,11 @@ class _SignInScreenState extends State<SignInScreen> {
     }
   }
   @override
+  void initState() {
+    _birthDay = users.map((value) => value["birthDay"]);
+    super.initState();
+  }
+  @override
   void dispose() {
     _formKey.currentState?.dispose();
     super.dispose();
@@ -171,6 +184,18 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               const LanguageSelect(
                 isSignIn: true,
+              ),
+              HaloSpacing.large,
+              AppInput.birthDate(
+                key: _birthDayKey,
+                styleInput: StyleInput.outlineBorder,
+                labelText: null,
+                dataDate: _birthDay.first,
+                hintText: Str.of(context).account_field_date_of_birth,
+                textEditingController: _birthDayController,
+                isRequire: true,
+                unShowStar: true,
+                textErrRequire: Str.of(context).validate_required(Str.of(context).account_field_date_of_birth),
               ),
             ],
           ),

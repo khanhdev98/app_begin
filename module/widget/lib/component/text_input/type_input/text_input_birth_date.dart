@@ -1,5 +1,9 @@
 import 'package:content/content.dart';
 import 'package:flutter/material.dart';
+import 'package:widget/component/text_input/type_input/time_format_common.dart';
+
+import '../../app_date_picker/show_bottom_date_picker.dart';
+import '../../app_date_picker/widget/app_date_time.dart';
 
 class TextInputBirthDate extends StatefulWidget {
   final InputDecoration inputDecoration;
@@ -30,7 +34,7 @@ class TextInputBirthDateState extends State<TextInputBirthDate> {
   late TextEditingController textEditingController;
   ValueNotifier<bool> taping = ValueNotifier(false);
   AutovalidateMode autoValidate = AutovalidateMode.disabled;
-  // HaloDateTime? _value;
+  AppDateTime? _value;
 
   @override
   void initState() {
@@ -38,9 +42,9 @@ class TextInputBirthDateState extends State<TextInputBirthDate> {
     super.initState();
   }
 
-  // HaloDateTime? valueDate() {
-  //   return _value;
-  // }
+  AppDateTime? valueDate() {
+    return _value;
+  }
 
   String? validate(String? value) {
     if ((value == null || value.trim() == "") && widget.isRequire == true) {
@@ -62,17 +66,17 @@ class TextInputBirthDateState extends State<TextInputBirthDate> {
           setState(() {
             taping.value = false;
           });
-          // if (!mounted) return;
-          // final a = await showBottomBirthDatePicker(
-          //     context,
-          //     "Choose Date",
-          //     DateTime(DateTime.now().year - 19),
-          //     DateTime(1900),
-          //     DateTime(DateTime.now().year - 18));
-          // if (a != null) {
-          //   _value = HaloDateTime(a);
-          //   textEditingController.text = a.formatTimeApp();
-          // }
+          if (!mounted) return;
+          final a = await showBottomBirthDatePicker(
+              context,
+              "Choose Date",
+              DateTime(DateTime.now().year - 19),
+              DateTime(1900),
+              DateTime(DateTime.now().year - 18));
+          if (a != null) {
+            _value = AppDateTime(a);
+            textEditingController.text = a.formatTimeApp();
+          }
         } : null,
         child: IgnorePointer(
           child: TextFormField(

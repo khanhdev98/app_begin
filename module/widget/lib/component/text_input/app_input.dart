@@ -4,6 +4,7 @@ import 'package:theme/theme.dart';
 import 'package:widget/component/text_input/type_input/text_input_locate.dart';
 import 'package:widget/component/text_input/type_input/type_input_text_area.dart';
 
+import '../app_date_picker/widget/app_date_time.dart';
 import 'type_input/text_input_birth_date.dart';
 import 'type_input/text_input_date.dart';
 import 'type_input/text_input_date_range.dart';
@@ -40,9 +41,9 @@ class AppInput extends StatefulWidget {
   bool? unShowStar;
 
   ///type date
-  // HaloDateTime? fromDate;
-  // HaloDateTime? endDate;
-  // HaloDateTime? initDate;
+  AppDateTime? fromDate;
+  AppDateTime? endDate;
+  AppDateTime? initDate;
   Function(DateTime)? onChangeDate;
   DateTime? dataDate;
 
@@ -153,10 +154,10 @@ class AppInput extends StatefulWidget {
       this.textEditingController,
       this.styleInput = StyleInput.underline,
       this.validate,
-      // this.fromDate,
-      // this.endDate,
+      this.fromDate,
+      this.endDate,
       this.isCenter = false,
-      // this.initDate,
+      this.initDate,
       this.textErrRequire,
       this.name,
       this.dataDate,
@@ -246,8 +247,8 @@ class AppInputState extends State<AppInput> {
   String get value => _controller.text;
 
   /// chi app dung cho dateTime, birthDay
-  // HaloDateTime? get valueDate => _keyDate.currentState?.valueDate();
-  // HaloDateTime? get valueBirthDay => _keyBirthDate.currentState?.valueDate();
+  AppDateTime? get valueDate => _keyDate.currentState?.valueDate();
+  AppDateTime? get valueBirthDay => _keyBirthDate.currentState?.valueDate();
 
   @override
   void initState() {
@@ -389,9 +390,9 @@ class AppInputState extends State<AppInput> {
           disable: widget.disable,
           textAlign: widget.isCenter == true ? TextAlign.center : widget.textAlign,
           onChange: widget.onChangeDate,
-          // fromDate: widget.fromDate,
-          // endDate: widget.endDate,
-          // initDate: widget.initDate,
+          fromDate: widget.fromDate,
+          endDate: widget.endDate,
+          initDate: widget.initDate,
           textErrRequire: widget.textErrRequire,
           key: _keyDate,
           styleInput: widget.styleInput,

@@ -1,6 +1,7 @@
 import 'package:content/content.dart';
 import 'package:flutter/material.dart';
 
+import '../../app_date_picker/widget/app_date_time.dart';
 import '../app_input.dart';
 
 class TextInputDate extends StatefulWidget {
@@ -10,9 +11,9 @@ class TextInputDate extends StatefulWidget {
   final bool? isRequire;
   final bool? disable;
   final TextAlign? textAlign;
-  // final HaloDateTime? fromDate;
-  // final HaloDateTime? endDate;
-  // final HaloDateTime? initDate;
+  final AppDateTime? fromDate;
+  final AppDateTime? endDate;
+  final AppDateTime? initDate;
   final String? textErrRequire;
   final String? name;
   final Function(String?)? validate;
@@ -26,9 +27,9 @@ class TextInputDate extends StatefulWidget {
       this.styleInput,
       this.textErrRequire,
       this.name,
-      // this.fromDate,
-      // this.endDate,
-      // this.initDate,
+      this.fromDate,
+      this.endDate,
+      this.initDate,
       this.onChange,
       this.textAlign,
       this.disable})
@@ -40,7 +41,7 @@ class TextInputDate extends StatefulWidget {
 
 class TextInputDateState extends State<TextInputDate> {
   late TextEditingController textEditingController;
-  // HaloDateTime? _value;
+  AppDateTime? _value;
 
   ValueNotifier<bool> taping = ValueNotifier(false);
 
@@ -50,9 +51,9 @@ class TextInputDateState extends State<TextInputDate> {
     super.initState();
   }
 
-  // HaloDateTime? valueDate() {
-  //   return _value;
-  // }
+  AppDateTime? valueDate() {
+    return _value;
+  }
 
   String? validate(String? value) {
     if ((value == null || value.trim() == "") && widget.isRequire == true) {
