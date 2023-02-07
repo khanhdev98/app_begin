@@ -2,18 +2,20 @@ import 'package:config/bootstrap/app_injection.dart';
 import 'package:config/bootstrap/app_register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:widget/todos/todos_screen.dart';
 import 'package:config/injectable/app_injector.dart';
-import '../focus_bloc_cubit.dart';
-import '../location_provider.dart';
-import '../page_route/pop_scope_dismiss_route.dart';
-import '../sign/signin_screen.dart';
+import '../component/page_route/pop_scope_dismiss_route.dart';
+import '../provider/location_provider.dart';
+import '../screen/sign/bloc/focus_bloc_cubit.dart';
+import '../screen/sign/bloc/sign_bloc_cubit.dart';
+import '../screen/sign/signin_screen.dart';
+import '../screen/todos/screen/todos_screen.dart';
 
 class AppCommon extends AppRegister {
   @override
   Future<void> dependencies(AppInjection injection) async {
     injection.factory<LocaleProvider>(() => LocaleProvider());
     injection.factory<FocusBlocCubit>(() => FocusBlocCubit());
+    injection.factory<SignBlocCubit>(() => SignBlocCubit());
   }
 
   static const String home = '/home';
@@ -29,6 +31,7 @@ class AppCommon extends AppRegister {
         return popScopeDismissRoute(
           settings: settings,
           child: () => MultiBlocProvider(providers: [
+            BlocProvider<SignBlocCubit>(create: (_) => AppInjector.I.get<SignBlocCubit>()),
             BlocProvider<FocusBlocCubit>(
                 create: (_) => AppInjector.I.get()..registerFocusSignIn())
           ], child: const SignInScreen()),

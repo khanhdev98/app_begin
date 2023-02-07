@@ -1,6 +1,7 @@
-name: widget
+name: data
 description: A new Flutter package project.
-publish_to: 'none'
+version: 0.0.1
+homepage:
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
@@ -9,24 +10,17 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  content:
-    path: ../content
-  theme:
-    path: ../theme
-  config:
-    path: ../config
-  data:
-    path: ../data
-
-  provider: any
-  flutter_easyloading: ^3.0.5
-  shared_preferences: ^2.0.17
-  bloc:
-  flutter_bloc:
+  freezed: '>=2.0.0'
+  build_runner: '>=2.2.1'
+  #Serialization and Deserialization
+  freezed_annotation: '>=2.0.0'
+  json_annotation: ^4.4.0
+  injectable_generator: ^2.1.0
+  json_serializable:
+  equatable: ^2.0.5
   dio: ^4.0.6
-  encrypt:
-
+  encrypt: 5.0.1
+  crypto: 3.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
