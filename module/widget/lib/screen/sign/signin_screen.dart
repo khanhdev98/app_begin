@@ -10,7 +10,10 @@ import '../../component/app_date_picker/show_bottom_date_picker.dart';
 import '../../component/text_input/app_input.dart';
 import '../../component/validate/validate.dart';
 import '../../component/widget/language_select.dart';
+import 'bloc/action_screen_cubit.dart';
 import 'bloc/focus_bloc_cubit.dart';
+import 'bloc/sign_bloc_cubit.dart';
+import 'data/user.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -29,105 +32,41 @@ class _SignInScreenState extends State<SignInScreen> {
 
   FocusBlocCubit get focusBlocCubit => context.read();
 
+  SignBlocCubit get _signBloc => context.read<SignBlocCubit>();
+
   FocusNode? get focusEmail => focusBlocCubit.focusNodes.getOrNull(0);
 
   FocusNode? get focusPassword => focusBlocCubit.focusNodes.getOrNull(1);
-  final List<Map<String, dynamic>> users = [
-    {
-      "id": "1",
-      "acc": "khanh@gmail.com",
-      "pass": "123456",
-      "birthDay": DateTime(1998, 4,21),
-    },
-    {
-      "id": "2",
-      "acc": "minh@gmail.com",
-      "pass": "123456",
-      "birthDay": DateTime(1998, 4,21),
-    },
-    {
-      "id": "3",
-      "acc": "huy@gmail.com",
-      "pass": "123456",
-      "birthDay": DateTime(1998, 4,21),
-    },
-    {
-      "id": "4",
-      "acc": "nam@gmail.com",
-      "pass": "123456",
-      "birthDay": DateTime(1998, 4,21),
-    },
-  ];
 
-  Iterable<String?> get accounts => users.map((value) => value["acc"]);
-
-  Iterable<String?> get passwords => users.map((value) => value["pass"]);
-
-  _loginSubmit() {
+  Future<void> _loginSubmit() async {
+    FocusScope.of(context).unfocus();
     if (_formKey.currentState?.validate() == true) {
       if (mounted) {
         EasyLoading.show();
-        Future.delayed(const Duration(milliseconds: 1000), () {
+        await Future.delayed(const Duration(milliseconds: 1000), () {
           EasyLoading.dismiss();
-        }).then((value) {
-          if (accounts.contains(_controllerAcc.text) && passwords.contains(_controllerPass.text)) {
-            Navigator.pushNamed(context, AppCommon.todoScreen).then((value) {
-                _controllerAcc.clear();
-                _controllerPass.clear();
-                setState(() {
-
-                });
-            });
-
-          } else {
-            return showDialog(
-                context: context,
-                builder: (_) => WillPopScope(
-                      onWillPop: () async => false,
-                      child: AlertDialog(
-                        contentPadding: const EdgeInsets.only(top: 16, left: 24, right: 24),
-                        actionsPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(28)),
-                        alignment: Alignment.center,
-                        backgroundColor: context.surfaceColor,
-                        title: Text(
-                          Str.of(context).error_unauthorized_title,
-                          style: context.dialogTitle,
-                        ),
-                        content: SingleChildScrollView(
-                          child: ListBody(
-                            children: <Widget>[
-                              Text(Str.of(context).sign_in_error_login_message),
-                            ],
-                          ),
-                        ),
-                        actions: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                              //onButtonPressed();
-                            },
-                            child: const Text(
-                              "try again",
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ));
-          }
-        });
+        }).then((value) => _signBloc.signIn(
+          userName: _controllerAcc.text.trim().toLowerCase(),
+          pass: _controllerPass.text.trim(),
+        ));
       }
     }
   }
   @override
   void initState() {
     _birthDay = users.map((value) => value["birthDay"]);
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      if (!mounted) return;
+      // bloc signIn
+      _signBloc.stream.listen((event) => event.trigger(context));
+    });
     super.initState();
   }
   @override
   void dispose() {
     _formKey.currentState?.dispose();
+    _controllerAcc.clear();
+    _controllerPass.clear();
     super.dispose();
   }
 

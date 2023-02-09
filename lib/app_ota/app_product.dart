@@ -2,6 +2,7 @@ import 'package:config/injectable/app_injector.dart';
 import 'package:content/l10n/app_localizations.dart';
 import 'package:content/l10n/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 import 'package:theme/material3/color/color_schemes.dart';
@@ -11,6 +12,7 @@ import 'package:widget/component/flutter_easyloading-3.0.5/lib/src/easy_loading.
 import 'package:widget/di/auth_router.dart';
 import 'package:widget/provider/location_provider.dart';
 import 'package:widget/component/widget/error_screen.dart';
+import 'package:widget/screen/sign/bloc/action_screen_cubit.dart';
 
 class AppProduct extends StatefulWidget {
   const AppProduct({Key? key, required this.onGenerate}) : super(key: key);

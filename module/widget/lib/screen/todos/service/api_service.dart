@@ -3,9 +3,10 @@ import 'package:dio/dio.dart';
 import '../model/model.dart';
 import 'api_url.dart';
 
-class NewApiService {
+class TodosUseCase {
   final Dio _dio = Dio();
-  Future<List<Todos>> fetchData() async {
+  Future<List<Todos>?> fetchData() async {
+    print("object khanh");
     Response response = await _dio.get(ApiUrl.I.todoUrl);
     List res = (response.data as List);
     List<Todos> todos =
