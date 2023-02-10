@@ -1,7 +1,8 @@
 import 'package:config/bootstrap/app_injection.dart';
 import 'package:config/bootstrap/app_register.dart';
 
-import '../screen/todos/service/api_service.dart';
+import '../screens/todos/service/api_service.dart';
+
 
 class ServiceRegister extends AppRegister {
   @override

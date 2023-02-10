@@ -75,7 +75,7 @@ class _LanguageSelectState extends State<LanguageSelect> {
     Future.delayed(const Duration(milliseconds: 2000), () {
       EasyLoading.dismiss();
     }).then((value) {
-      Navigator.of(context).pushReplacementNamed(AppCommon.home);
+      Navigator.of(context).pushReplacementNamed(AppCommon.signIn);
       provider.setLanguageCode(languageCode);
     });
   }

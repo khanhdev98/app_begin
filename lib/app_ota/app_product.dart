@@ -12,7 +12,6 @@ import 'package:widget/component/flutter_easyloading-3.0.5/lib/src/easy_loading.
 import 'package:widget/di/auth_router.dart';
 import 'package:widget/provider/location_provider.dart';
 import 'package:widget/component/widget/error_screen.dart';
-import 'package:widget/screen/sign/bloc/action_screen_cubit.dart';
 
 class AppProduct extends StatefulWidget {
   const AppProduct({Key? key, required this.onGenerate}) : super(key: key);
@@ -57,7 +56,7 @@ class _AppProductState extends State<AppProduct> {
             localizationsDelegates: Str.localizationsDelegates,
             useInheritedMediaQuery: true,
             onGenerateRoute: widget.onGenerate,
-            initialRoute: AppCommon.home,
+            initialRoute: AppCommon.feed,
             locale: _findLocale(provider.languageCode),
             localeResolutionCallback: _localeResolution,
             onUnknownRoute: (settings) =>
