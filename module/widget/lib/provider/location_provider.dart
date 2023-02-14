@@ -45,6 +45,4 @@ class LocaleProvider extends ChangeNotifier {
     "en": 'English',
     'vi': 'Tiếng Việt',
   };
-
-
 }
