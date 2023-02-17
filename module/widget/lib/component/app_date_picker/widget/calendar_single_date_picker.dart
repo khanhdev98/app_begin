@@ -1043,10 +1043,10 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog>
   _RestorableDatePickerEntryMode(widget.initialEntryMode);
   late final RestorableDateTimeN _selectedStart = RestorableDateTimeN(widget.initialDate);
   final RestorableBool _autoValidate = RestorableBool(false);
-  final GlobalKey _calendarPickerKey = GlobalKey();
-  final GlobalKey<_InputDateRangePickerState> _inputPickerKey =
+  final GlobalKey _calendarRangePickerKey = GlobalKey();
+  final GlobalKey<_InputDateRangePickerState> _inputPickerRangeKey =
   GlobalKey<_InputDateRangePickerState>();
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formRangeKey = GlobalKey<FormState>();
 
   @override
   String? get restorationId => widget.restorationId;
@@ -1061,7 +1061,7 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog>
   void _handleOkInput() {
     if (_entryMode.value == DatePickerEntryMode.input ||
         _entryMode.value == DatePickerEntryMode.inputOnly) {
-      final FormState form = _formKey.currentState!;
+      final FormState form = _formRangeKey.currentState!;
       if (!form.validate()) {
         setState(() => _autoValidate.value = true);
         return;
@@ -1074,7 +1074,7 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog>
   void _handleOk() {
     if (_entryMode.value == DatePickerEntryMode.input ||
         _entryMode.value == DatePickerEntryMode.inputOnly) {
-      final _InputDateRangePickerState picker = _inputPickerKey.currentState!;
+      final _InputDateRangePickerState picker = _inputPickerRangeKey.currentState!;
       if (!picker.validate()) {
         setState(() {
           _autoValidate.value = true;
@@ -1140,7 +1140,7 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog>
       case DatePickerEntryMode.calendar:
       case DatePickerEntryMode.calendarOnly:
         contents = _CalendarRangePickerDialog(
-          key: _calendarPickerKey,
+          key: _calendarRangePickerKey,
           isSingle: widget.isSingle,
           selectedStartDate: _selectedStart.value,
           firstDate: widget.firstDate,
@@ -1183,7 +1183,7 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog>
               children: <Widget>[
                 const Spacer(),
                 Form(
-                  key: _formKey,
+                  key: _formRangeKey,
                   // autovalidateMode: _autoValidate.value.,
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -1503,7 +1503,7 @@ class _CalendarDateRangePicker extends StatefulWidget {
 }
 
 class _CalendarDateRangePickerState extends State<_CalendarDateRangePicker> {
-  final GlobalKey _scrollViewKey = GlobalKey();
+  final GlobalKey _scrollViewDateKey = GlobalKey();
   DateTime? _startDate;
   DateTime? _endDate;
   int _initialMonthIndex = 0;
@@ -1628,7 +1628,7 @@ class _CalendarDateRangePickerState extends State<_CalendarDateRangePicker> {
             // months. The first item in the second SliverList is the initial
             // month to be displayed.
             child: CustomScrollView(
-              key: _scrollViewKey,
+              key: _scrollViewDateKey,
               controller: _controller,
               center: sliverAfterKey,
               slivers: <Widget>[

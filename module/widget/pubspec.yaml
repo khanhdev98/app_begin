@@ -28,6 +28,7 @@ dependencies:
   encrypt:
   duration: 3.0.12
   showcaseview: ^2.0.0+1
+  video_player: ^2.2.5
 
 dev_dependencies:
   flutter_test:

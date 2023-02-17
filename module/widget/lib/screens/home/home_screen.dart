@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Column(
       children: [
         ElevatedButton(onPressed: () {
-          Navigator.pushNamed(context, AppCommon.launcher);
+          Navigator.pushNamed(context, AppCommon.videoApp);
         }, child: const Text("Launcher"))
       ],
     );

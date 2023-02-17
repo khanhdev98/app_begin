@@ -216,13 +216,13 @@ class _DatePickerDialogState extends State<DatePickerDialog> with RestorationMix
     registerForRestoration(_entryMode, 'calendar_entry_mode');
   }
 
-  final GlobalKey _calendarPickerKey = GlobalKey();
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey _calendarPickerDialogKey = GlobalKey();
+  final GlobalKey<FormState> _formDialogKey = GlobalKey<FormState>();
 
   void _handleOk() {
     if (_entryMode.value == DatePickerEntryMode.input ||
         _entryMode.value == DatePickerEntryMode.inputOnly) {
-      final FormState form = _formKey.currentState!;
+      final FormState form = _formDialogKey.currentState!;
       if (!form.validate()) {
         setState(() => _autovalidateMode.value = AutovalidateMode.always);
         return;
@@ -244,7 +244,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> with RestorationMix
           _entryMode.value = DatePickerEntryMode.input;
           break;
         case DatePickerEntryMode.input:
-          _formKey.currentState!.save();
+          _formDialogKey.currentState!.save();
           _entryMode.value = DatePickerEntryMode.calendar;
           break;
         case DatePickerEntryMode.calendarOnly:
@@ -327,7 +327,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> with RestorationMix
 
     CalendarDatePicker calendarDatePicker() {
       return CalendarDatePicker(
-        key: _calendarPickerKey,
+        key: _calendarPickerDialogKey,
         initialDate: _selectedDate.value,
         firstDate: widget.firstDate,
         lastDate: widget.lastDate,
@@ -340,7 +340,7 @@ class _DatePickerDialogState extends State<DatePickerDialog> with RestorationMix
 
     Form inputDatePicker() {
       return Form(
-        key: _formKey,
+        key: _formDialogKey,
         autovalidateMode: _autovalidateMode.value,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -1077,7 +1077,7 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog> with Rest
       RestorableDateTimeN(widget.initialDateRange?.start);
   late final RestorableDateTimeN _selectedEnd = RestorableDateTimeN(widget.initialDateRange?.end);
   final RestorableBool _autoValidate = RestorableBool(false);
-  final GlobalKey _calendarPickerKey = GlobalKey();
+  final GlobalKey _calendarPickerDialogKey = GlobalKey();
   final GlobalKey<_InputDateRangePickerState> _inputPickerKey =
       GlobalKey<_InputDateRangePickerState>();
 
@@ -1184,7 +1184,7 @@ class _DateRangePickerDialogState extends State<DateRangePickerDialog> with Rest
       case DatePickerEntryMode.calendar:
       case DatePickerEntryMode.calendarOnly:
         contents = _CalendarRangePickerDialog(
-          key: _calendarPickerKey,
+          key: _calendarPickerDialogKey,
           selectedStartDate: _selectedStart.value,
           selectedEndDate: _selectedEnd.value,
           isSameDays: widget.isSameDays,

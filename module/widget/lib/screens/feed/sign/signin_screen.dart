@@ -21,7 +21,7 @@ class SignInScreen extends StatefulWidget {
 }
 
 class _SignInScreenState extends State<SignInScreen> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKeySign = GlobalKey<FormState>();
   final TextEditingController _controllerAcc = TextEditingController();
   final TextEditingController _controllerPass = TextEditingController();
   final GlobalKey<AppInputState> _birthDayKey = GlobalKey<AppInputState>();
@@ -38,7 +38,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   Future<void> _loginSubmit() async {
     FocusScope.of(context).unfocus();
-    if (_formKey.currentState?.validate() == true) {
+    if (_formKeySign.currentState?.validate() == true) {
       if (mounted) {
         EasyLoading.show();
         await Future.delayed(const Duration(milliseconds: 1000), () {
@@ -62,7 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
   }
   @override
   void dispose() {
-    _formKey.currentState?.dispose();
+    _formKeySign.currentState?.dispose();
     _controllerAcc.clear();
     _controllerPass.clear();
     super.dispose();
@@ -83,7 +83,7 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             children: [
               Form(
-                  key: _formKey,
+                  key: _formKeySign,
                   child: Column(
                     children: [
                       AppInput.text(

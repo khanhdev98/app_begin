@@ -3,6 +3,8 @@ import 'package:config/bootstrap/app_register.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:config/injectable/app_injector.dart';
+import 'package:theme/material3/color/color_schemes.dart';
+import 'package:video_player/video_player.dart';
 import 'package:widget/screens/feed/sign/bloc/focus_bloc_cubit.dart';
 import 'package:widget/screens/feed/sign/bloc/sign_bloc_cubit.dart';
 import '../component/page_route/pop_scope_dismiss_route.dart';
@@ -13,6 +15,7 @@ import '../screens/home/home_screen.dart';
 import '../screens/todos/bloc/bloc_todos.dart';
 import '../screens/todos/screen/todos_screen.dart';
 import '../screens/todos/service/api_service.dart';
+import '../screens/video/video_screen.dart';
 
 class AppCommon extends AppRegister {
   @override
@@ -24,12 +27,12 @@ class AppCommon extends AppRegister {
   }
 
   static const String signIn = '/signIn';
-  static const String launcher = '/launcher';
+  static const String videoApp = '/launcher';
   static const String todoScreen = '/todoScreen';
   static const String home = '/home';
   static const String feed = '/feed';
   @override
-  List<String> routers = [signIn, launcher, todoScreen, home, feed];
+  List<String> routers = [signIn, videoApp, todoScreen, home, feed];
 
   @override
   Route? onGenerate(AppInjection injection, RouteSettings settings) {
@@ -50,10 +53,10 @@ class AppCommon extends AppRegister {
             ),
           ),
         );
-      case launcher:
+      case videoApp:
         return popScopeDismissRoute(
           settings: settings,
-          child: () => const LauncherPage(),
+          child: () => const VideoApp(),
         );
 
       case feed:
@@ -73,38 +76,16 @@ class AppCommon extends AppRegister {
                   child: const TodoScreen(title: "Todos"),
                 ));
       case home:
-        return popScopeDismissRoute(settings: settings, child: () => MultiBlocProvider(
-          providers: [
-            BlocProvider<SignBlocCubit>(create: (_) => AppInjector.I.get<SignBlocCubit>()),
-
-          ],
-          child: const HomeScreen(),
-        ));
+        return popScopeDismissRoute(
+            settings: settings,
+            child: () => MultiBlocProvider(
+                  providers: [
+                    BlocProvider<SignBlocCubit>(create: (_) => AppInjector.I.get<SignBlocCubit>()),
+                  ],
+                  child: const HomeScreen(),
+                ));
       default:
         return null;
     }
-  }
-}
-
-class LauncherPage extends StatefulWidget {
-  const LauncherPage({Key? key}) : super(key: key);
-
-  @override
-  State<LauncherPage> createState() => _LauncherPageState();
-}
-
-class _LauncherPageState extends State<LauncherPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: SizedBox(
-          height: 288,
-          width: 288,
-          child: Icon(Icons.more),
-        ),
-      ),
-    );
   }
 }

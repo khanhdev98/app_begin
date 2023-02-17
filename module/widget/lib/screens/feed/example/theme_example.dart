@@ -32,7 +32,7 @@ class _ThemeExampleState extends State<ThemeExample> with TickerProviderStateMix
     _tabController = TabController(length: 3, vsync: this);
   }
 
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKeyTheme = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext buildContext) {
@@ -258,7 +258,7 @@ class _ThemeExampleState extends State<ThemeExample> with TickerProviderStateMix
 
   Widget get _buildFromExample {
     return Form(
-      key: _formKey,
+      key: _formKeyTheme,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.max,
@@ -269,7 +269,7 @@ class _ThemeExampleState extends State<ThemeExample> with TickerProviderStateMix
               labelText: "Number",
             ),
             onChanged: (a) {
-              _formKey.currentState!.validate();
+              _formKeyTheme.currentState!.validate();
             },
             validator: (val) {
               // return !ValidateUtils.isValidNumber(val) ? "Invalid number" : null;
