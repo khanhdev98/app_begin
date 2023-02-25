@@ -48,7 +48,7 @@ class _AppProductState extends State<AppProduct> {
         create: (context) => AppInjector.I.get<LocaleProvider>(),
         child: Consumer<LocaleProvider>(builder: (context, provider, child) {
           return MaterialApp(
-            title: 'Flutter Demo',
+            title: 'Begin app',
             themeMode: ThemeMode.light,
             theme: AppThemes.haloLightTheme,
             darkTheme: AppThemes.haloLightTheme,

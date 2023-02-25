@@ -75,7 +75,7 @@ class HaloShowcaseWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) => showCaseType == ShowCaseType.normal
       ? Showcase(
-          key: globalKey,
+          keyShowcase: globalKey,
           isTour: isTour,
           showcaseBackgroundColor: showcaseBackgroundColor,
           contentPadding: contentPadding,
@@ -94,7 +94,7 @@ class HaloShowcaseWidget extends StatelessWidget {
           onTargetClick: onTargetClick,
         )
       : Showcase.withWidget(
-          key: globalKey,
+          keyShowcase: globalKey,
           height: 50,
           width: 140,
           disableAnimation: disableAnimation,

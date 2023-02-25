@@ -56,10 +56,10 @@ class AppInjector implements Injector {
   @override
   Future<T> getAsync<T extends Object>({String? instanceName, param1, param2}) {
     if (instanceName != null) {
-      return _getIt.getAsync<T>(param1: param1, param2: param2);
-    } else {
       return _getIt.getAsync<T>(
           instanceName: instanceName, param1: param1, param2: param2);
+    } else {
+      return _getIt.getAsync<T>(param1: param1, param2: param2);
     }
   }
 

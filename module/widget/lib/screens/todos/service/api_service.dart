@@ -8,6 +8,7 @@ class TodosUseCase {
   Future<List<Todos>?> fetchData() async {
     print("object khanh");
     Response response = await _dio.get(ApiUrl.I.todoUrl);
+    print("response======= $response");
     List res = (response.data as List);
     List<Todos> todos =
     res.map((e) => Todos.fromJson(e as Map<String, dynamic>)).toList();

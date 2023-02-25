@@ -20,7 +20,6 @@ class TodoScreen extends StatefulWidget {
 }
 
 class _TodoScreenState extends State<TodoScreen> {
-  SignBlocCubit get _signBloc => context.read<SignBlocCubit>();
   String newText = '';
   final TextEditingController _controller = TextEditingController();
 
@@ -30,19 +29,9 @@ class _TodoScreenState extends State<TodoScreen> {
     EasyLoading.show();
     await Future.delayed(const Duration(milliseconds: 1000), () {
       EasyLoading.dismiss();
-    }).then((value) => _signBloc.signOut());
+    });
   }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      if (!mounted) return;
-      // bloc signIn
-      _signBloc.stream.listen((event) => event.trigger(context));
-    });
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -104,41 +93,6 @@ class _TodoScreenState extends State<TodoScreen> {
           return Container(color: context.surfaceColor, height: double.infinity,);
         }));
   }
-
-  // FutureBuilder<List<Todos>>(
-  //     future: NewApiService().fetchData(),
-  //     builder: (context, snapshot) {
-  //       if (!snapshot.hasData) {
-  //         return const Center(
-  //           child: CircularProgressIndicator(),
-  //         );
-  //       } else {
-  //         return Container(
-  //           color: context.surfaceColor,
-  //           child: ListView.builder(
-  //             itemCount: snapshot.data?.length,
-  //             itemBuilder: (context, index) {
-  //               if(snapshot.data == null) {
-  //                 return const SizedBox.shrink();
-  //               }
-  //               newText = snapshot.data?[index].title ?? "";
-  //               return _filter(_controller.text, newText) ? Padding(
-  //                 padding: const EdgeInsets.all(16),
-  //                 child: Column(
-  //                   mainAxisAlignment: MainAxisAlignment.start,
-  //                   crossAxisAlignment: CrossAxisAlignment.start,
-  //                   children: [Text(
-  //                     newText,
-  //                     style: const TextStyle(fontSize: 16),
-  //                   )
-  //                   ],
-  //                 ),
-  //               ) : const SizedBox.shrink();
-  //             },
-  //           ),
-  //         );
-  //       }
-  //     })
 
   Widget _searchField(BuildContext context) {
     return Container(

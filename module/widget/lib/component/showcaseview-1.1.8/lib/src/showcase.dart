@@ -34,8 +34,7 @@ import 'showcase_widget.dart';
 import 'tooltip_widget.dart';
 
 class Showcase extends StatefulWidget {
-  @override
-  final GlobalKey key;
+  final GlobalKey keyShowcase;
 
   final Widget child;
   final String? title;
@@ -73,7 +72,7 @@ class Showcase extends StatefulWidget {
   final double? blurValue;
 
   const Showcase({
-    required this.key,
+    required this.keyShowcase,
     required this.child,
     this.title,
     required this.description,
@@ -117,7 +116,7 @@ class Showcase extends StatefulWidget {
             "onTargetClick is required if you're using disposeOnTap");
 
   const Showcase.withWidget({
-    required this.key,
+    required this.keyShowcase,
     required this.child,
     required this.container,
     required this.height,
@@ -165,7 +164,7 @@ class _ShowcaseState extends State<Showcase> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     position ??= GetPosition(
-      key: widget.key,
+      keyPosition: widget.keyShowcase,
       padding: widget.overlayPadding,
       screenWidth: MediaQuery.of(context).size.width,
       screenHeight: MediaQuery.of(context).size.height,
@@ -200,7 +199,7 @@ class _ShowcaseState extends State<Showcase> {
         _isScrollRunning = true;
       });
       await Scrollable.ensureVisible(
-        widget.key.currentContext!,
+        widget.keyShowcase.currentContext!,
         duration: showCaseWidgetState.widget.scrollDuration,
         alignment: 0.5,
       );
@@ -222,7 +221,7 @@ class _ShowcaseState extends State<Showcase> {
       overlayBuilder: (context, rectBound, offset) {
         final size = MediaQuery.of(context).size;
         position = GetPosition(
-          key: widget.key,
+          keyPosition: widget.keyShowcase,
           padding: widget.overlayPadding,
           screenWidth: size.width,
           screenHeight: size.height,
@@ -243,7 +242,7 @@ class _ShowcaseState extends State<Showcase> {
     } else if (timer != null && !timer!.isActive) {
       timer = null;
     }
-    showCaseWidgetState.completed(widget.key);
+    showCaseWidgetState.completed(widget.keyShowcase);
   }
 
   void _getOnTargetTap() {

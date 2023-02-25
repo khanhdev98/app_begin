@@ -24,9 +24,6 @@ class _SignInScreenState extends State<SignInScreen> {
   final GlobalKey<FormState> _formKeySign = GlobalKey<FormState>();
   final TextEditingController _controllerAcc = TextEditingController();
   final TextEditingController _controllerPass = TextEditingController();
-  final GlobalKey<AppInputState> _birthDayKey = GlobalKey<AppInputState>();
-  final TextEditingController _birthDayController = TextEditingController();
-  late Iterable<DateTime?> _birthDay;
 
   FocusBlocCubit get focusBlocCubit => context.read<FocusBlocCubit>();
 
@@ -52,7 +49,6 @@ class _SignInScreenState extends State<SignInScreen> {
   }
   @override
   void initState() {
-    _birthDay = users.map((value) => value["birthDay"]);
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       if (!mounted) return;
       // bloc signIn
@@ -121,18 +117,6 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               const LanguageSelect(
                 isSignIn: true,
-              ),
-              HaloSpacing.large,
-              AppInput.birthDate(
-                key: _birthDayKey,
-                styleInput: StyleInput.outlineBorder,
-                labelText: null,
-                dataDate: _birthDay.first,
-                hintText: Str.of(context).account_field_date_of_birth,
-                textEditingController: _birthDayController,
-                isRequire: true,
-                unShowStar: true,
-                textErrRequire: Str.of(context).validate_required(Str.of(context).account_field_date_of_birth),
               ),
             ],
           ),

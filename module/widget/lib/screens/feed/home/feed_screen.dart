@@ -6,7 +6,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:theme/material3/m3_theme_lib.dart';
 import 'package:widget/di/auth_router.dart';
 
+import '../../../component/text_input/app_input.dart';
 import '../example/theme_example.dart';
+import '../sign/data/user.dart';
 
 class FeedScreen extends StatefulWidget {
 
@@ -19,6 +21,15 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
+  final GlobalKey<AppInputState> _birthDayKey = GlobalKey<AppInputState>();
+  final TextEditingController _birthDayController = TextEditingController();
+  late Iterable<DateTime?> _birthDay;
+
+  @override
+  void initState() {
+    _birthDay = users.map((value) => value["birthDay"]);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -150,7 +161,26 @@ class _FeedScreenState extends State<FeedScreen> {
               leading: const Icon(Icons.calendar_month), //Image.asset(PathIcons.icHandCarried),
               title: const Text('Date pickers'),
               onTap: () {
-
+                Navigator.push(context, MaterialPageRoute(builder: (_) => Scaffold(
+                  appBar: AppBar(
+                    title: const Text('Date picker'),
+                  ),
+                  body: Container(
+                    color: context.surfaceColor,
+                    padding: const EdgeInsets.all(16),
+                    child: AppInput.birthDate(
+                      key: _birthDayKey,
+                      styleInput: StyleInput.outlineBorder,
+                      labelText: null,
+                      dataDate: _birthDay.first,
+                      hintText: Str.of(context).account_field_date_of_birth,
+                      textEditingController: _birthDayController,
+                      isRequire: true,
+                      unShowStar: true,
+                      textErrRequire: Str.of(context).validate_required(Str.of(context).account_field_date_of_birth),
+                    ),
+                  ),
+                ),));
               },
             ),
           // TODO: LANG

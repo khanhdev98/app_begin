@@ -58,20 +58,15 @@ class ExpandedAppbarCustomDelegate extends SliverPinnedPersistentHeaderDelegate 
   Widget build(BuildContext context, double shrinkOffset, double? minExtent, double maxExtent,
       bool overlapsContent) {
     double per = min(1, shrinkOffset / (maxExtent - (minExtent ?? 0)));
-
     return Stack(
       children: [
         Opacity(
           opacity: per,
           child: minExtentProtoType,
         ),
-        Positioned(
-          top: 0,
-          left: 0,
-          child: Opacity(
-            opacity: 1 - per,
-            child: maxExtentProtoType,
-          ),
+        Opacity(
+          opacity: 1 - per,
+          child: maxExtentProtoType,
         ),
       ],
     );

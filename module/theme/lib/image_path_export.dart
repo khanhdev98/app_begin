@@ -69,8 +69,6 @@ class PathIcons {
   static const icVerifiedCheck = "$_iconsFolder/common/ic_verified_check.png";
 
   //=====Hotel======================================================
-  static const backgroundHeaderSendMoney = '$_iconsFolder/common/send_money_background.png';
-
   static const bgHeaderPicker = "bg_header_date_picker.png";
   static const icLocat = "packages/theme/assets/images/local_blue.png";
   static const icRightChaveron = "packages/theme/assets/images/ic_right_chaveron.png";

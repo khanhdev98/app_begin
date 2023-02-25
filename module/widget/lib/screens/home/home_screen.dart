@@ -4,6 +4,7 @@ import 'package:theme/theme.dart';
 import 'package:widget/di/auth_router.dart';
 
 import '../../component/flutter_easyloading-3.0.5/lib/flutter_easyloading.dart';
+import '../../di/service_register.dart';
 import '../../scaffold/appbar/expanded/expanded_appbar_custom.dart';
 import '../feed/sign/bloc/sign_bloc_cubit.dart';
 
@@ -16,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   double height = 240;
-  final _keyContainer = GlobalKey();
+  final _keyContainer = const Key("kf");
 
   SignBlocCubit get _signBloc => context.read<SignBlocCubit>();
 
@@ -30,13 +31,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void initState() {
-    // TODO: implement initState
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      setState(() {
-        height = (_keyContainer.currentContext?.size?.height ?? 0) + 70;
-      });
+      // setState(() {
+      //   height = (_keyContainer.currentContext?.size?.height ?? 0) + 70;
+      // });
       if (!mounted) return;
-      // bloc signIn
       _signBloc.stream.listen((event) => event.trigger(context));
     });
     super.initState();
@@ -133,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         const Text(''),
         ElevatedButton(onPressed: () {
-          Navigator.pushNamed(context, AppCommon.todoScreen);
+          Navigator.pushNamed(context, ServiceRegister.todoScreen);
         }, child: const Text("Todos"))
       ],
     );
@@ -185,7 +184,7 @@ class _AppBartTransparentState extends State<_AppBartTransparent> {
       padding: EdgeInsets.only(top: spaceTop),
       decoration: const BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(PathIcons.backgroundHeaderSendMoney),
+          image: AssetImage(PathIcons.backgroundDashBoard),
           fit: BoxFit.cover,
         ),
       ),

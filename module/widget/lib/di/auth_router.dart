@@ -28,11 +28,10 @@ class AppCommon extends AppRegister {
 
   static const String signIn = '/signIn';
   static const String videoApp = '/launcher';
-  static const String todoScreen = '/todoScreen';
   static const String home = '/home';
   static const String feed = '/feed';
   @override
-  List<String> routers = [signIn, videoApp, todoScreen, home, feed];
+  List<String> routers = [signIn, videoApp, home, feed];
 
   @override
   Route? onGenerate(AppInjection injection, RouteSettings settings) {
@@ -64,17 +63,6 @@ class AppCommon extends AppRegister {
           settings: settings,
           child: () => const FeedScreen(),
         );
-
-      case todoScreen:
-        return popScopeDismissRoute(
-            settings: settings,
-            child: () => MultiBlocProvider(
-                  providers: [
-                    BlocProvider<BlocTodosCubit>(
-                        create: (_) => AppInjector.I.get<BlocTodosCubit>()),
-                  ],
-                  child: const TodoScreen(title: "Todos"),
-                ));
       case home:
         return popScopeDismissRoute(
             settings: settings,
