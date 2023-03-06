@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:theme/material3/m3_theme_lib.dart';
 import 'package:widget/component/extensions/collection_extention.dart';
-import 'package:widget/di/auth_router.dart';
 
 import 'package:widget/component/flutter_easyloading-3.0.5/lib/flutter_easyloading.dart';
 import '../../../component/text_input/app_input.dart';
@@ -11,7 +10,6 @@ import '../../../component/validate/validate.dart';
 import '../../../component/widget/language_select.dart';
 import 'bloc/focus_bloc_cubit.dart';
 import 'bloc/sign_bloc_cubit.dart';
-import 'data/user.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);

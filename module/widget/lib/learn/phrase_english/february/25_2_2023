@@ -10,7 +10,7 @@
     8, That's it
     9, That's not fair
     10, That's not right
-    11, that's right
+    11, that's right => dung roi
     12, That's too bad
     13,14 That's too many == That's too much
     15, The book is under the table
@@ -20,7 +20,7 @@
     19, this doesn't work
     20, this is very difficult
     21, this is very important
-    22, Try it
+    22, Try it-> thu no
     23, Very good, thank
     24, We like it very much
     25, would you take a message please? => Bạn có thể nhận tin nhắn giúp tôi được không
@@ -51,17 +51,16 @@
     18, Do you have any coffee?=> Ban co cafe khong
     19, Do you have anything cheaper? => Ban co thu gi re hon khong
     20, Do you take credit cards? => Ban co chap nhan the tin dung khong
-    21, How are you paying? => Ban tra bang gi
+    21, How are you paying? => Ban tra bang gi?
     22, How many people are there in New York? => co bao nhieu nguoi o newyork
     23, How much are these earrings? => doi bong tai nay bao nhieu tien
     24, How much do i owe you? => toi no ban bao nhieu
-    25, How much does it cost per day? Gia bao nhieu 1 ngay
+    25, How much does it cost per day? Gia bao nhieu 1 ngay, no co gia bao nhieu 1 ngay
     26, How much does this cost? => cai nay gia bao nhieu \ no gia bao nhieu
     27, How much is it to go to Miami? => Di toi Miami gia bao nhieu
     28, How much money do you make? => ban kiem dk bao nhieu tien?
     29, I don't have a girlfriend.
     30, I don't have any money
-
 
 
 

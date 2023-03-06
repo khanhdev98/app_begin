@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 import 'package:theme/theme.dart';
 import 'package:theme/material3/icons/app_icon.dart';
 
@@ -32,66 +33,76 @@ class _TodoScreenState extends State<TodoScreen> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: context.surfaceColor,
-          title: Text(widget.title),
-          actions: [IconButton(onPressed: () => onPressed(), icon: const Icon(Icons.add))],
-          bottom: PreferredSize(
-            preferredSize: const Size.fromHeight(90),
-            child: Container(
-              color: context.surfaceColor,
-              child: Column(
-                children: [
-                  const Divider(
-                    height: 1,
-                  ),
-                  _searchField(context),
-                ],
+    return ChangeNotifierProvider.value(
+      value: blocTodos.scrollModel,
+      child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: context.surfaceColor,
+            title: Text(widget.title),
+            actions: [IconButton(onPressed: () => onPressed(), icon: const Icon(Icons.add))],
+            bottom: PreferredSize(
+              preferredSize: const Size.fromHeight(90),
+              child: Container(
+                color: context.surfaceColor,
+                child: Column(
+                  children: [
+                    const Divider(
+                      height: 1,
+                    ),
+                    _searchField(context),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
-        body: BlocBuilder<BlocTodosCubit, TodoBlocState>(builder: (context, state) {
-          state is TodoBlocLoadingState
-              ? (_filter(_controller.text, newText)
-                  ? EasyLoading.show()
-                  : EasyLoading.dismiss())
-              : EasyLoading.dismiss();
+          body: BlocBuilder<BlocTodosCubit, TodoBlocState>(builder: (context, state) {
+            state is TodoBlocLoadingState ? const CircularProgressIndicator() : const SizedBox.shrink();
 
-          if (state is TodoBlocSuccessState) {
-            return Container(
-                color: context.surfaceColor,
-                child: ListView.builder(
-                    itemCount: state.data?.length,
-                    itemBuilder: (context, index) {
-                      if (state.data == null) {
-                        return const SizedBox.shrink();
-                      }
-                      newText = state.data?[index].title ?? "";
-                      return _filter(_controller.text, newText)
-                          ? Padding(
-                              padding: const EdgeInsets.all(16),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    newText,
-                                    style: const TextStyle(fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            )
-                          : const SizedBox.shrink();
-                    }));
-          }
+            if (state is TodoBlocSuccessState) {
+              return Container(
+                  color: context.surfaceColor,
+                  child: ListView.builder(
+                      itemCount: state.data?.length,
+                      itemBuilder: (context, index) {
+                        if (state.data == null) {
+                          return const SizedBox.shrink();
+                        }
+                        newText = state.data?[index].title ?? "";
+                        return _filter(_controller.text, newText)
+                            ? Padding(
+                                padding: const EdgeInsets.all(16),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      newText,
+                                      style: const TextStyle(fontSize: 16),
+                                    )
+                                  ],
+                                ),
+                              )
+                            : const SizedBox.shrink();
+                      }));
+            }
 
-          return Container(color: context.surfaceColor, height: double.infinity,);
-        }));
+            return Container(color: context.surfaceColor, height: double.infinity,);
+          })),
+    );
+  }
+
+  Consumer<ScrollModel> _itemProgressLoading() {
+    return Consumer<ScrollModel>(
+      builder: (context, model, __) {
+        return model.isFetchDone == false
+            ? const Center(
+          child: CircularProgressIndicator(),
+        )
+            : const SizedBox.shrink();
+      },
+    );
   }
 
   Widget _searchField(BuildContext context) {

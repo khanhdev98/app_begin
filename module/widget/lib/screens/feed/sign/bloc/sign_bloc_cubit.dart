@@ -1,7 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:content/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:theme/material3/color/color_schemes.dart';
 import 'package:theme/material3/m3_theme_lib.dart';
 import '../../../../di/auth_router.dart';
