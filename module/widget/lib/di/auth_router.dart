@@ -9,6 +9,7 @@ import 'package:widget/screens/feed/sign/bloc/focus_bloc_cubit.dart';
 import 'package:widget/screens/feed/sign/bloc/sign_bloc_cubit.dart';
 import '../component/page_route/pop_scope_dismiss_route.dart';
 import '../provider/location_provider.dart';
+import '../screens/boarding/boarding_page.dart';
 import '../screens/feed/home/feed_screen.dart';
 import '../screens/feed/sign/signin_screen.dart';
 import '../screens/home/home_screen.dart';
@@ -27,11 +28,12 @@ class AppCommon extends AppRegister {
   }
 
   static const String signIn = '/signIn';
+  static const String boarding = '/boarding';
   static const String videoApp = '/launcher';
   static const String home = '/home';
   static const String feed = '/feed';
   @override
-  List<String> routers = [signIn, videoApp, home, feed];
+  List<String> routers = [signIn, videoApp, home, feed, boarding];
 
   @override
   Route? onGenerate(AppInjection injection, RouteSettings settings) {
@@ -56,6 +58,12 @@ class AppCommon extends AppRegister {
         return popScopeDismissRoute(
           settings: settings,
           child: () => const VideoApp(),
+        );
+
+      case boarding:
+        return popScopeDismissRoute(
+          settings: settings,
+          child: () => const BoardingPage(),
         );
 
       case feed:

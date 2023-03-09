@@ -177,7 +177,7 @@ class _FeedScreenState extends State<FeedScreen> {
                       textEditingController: _birthDayController,
                       isRequire: true,
                       unShowStar: true,
-                      textErrRequire: Str.of(context).validate_required(Str.of(context).account_field_date_of_birth),
+                      textErrRequire: "error",
                     ),
                   ),
                 ),));

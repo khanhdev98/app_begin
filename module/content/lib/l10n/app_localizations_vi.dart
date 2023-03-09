@@ -5,6 +5,691 @@ class StrVi extends Str {
   StrVi([String locale = 'vi']) : super(locale);
 
   @override
+  String get verify_error_common => 'An error occurred. Please try again';
+
+  @override
+  String get verify_error_incorrect => 'The verification code is incorrect';
+
+  @override
+  String get verify_error_waiting_minutes => 'You have just requested a verification code. Please wait a few minutes before trying again.';
+
+  @override
+  String get verify_error_waiting_24h => 'You have requested for new verification code too many times. Please wait 24 hours before trying again.';
+
+  @override
+  String get verify_error_code_is_expired => 'Your verification code has been expired. Please choose \"resend code\" to receive a new verification code.';
+
+  @override
+  String get verify_error_invalid_value => 'Có lỗi xảy ra, vui lòng thử lại.';
+
+  @override
+  String get verify_error_max_verified => 'You have attempted to enter the verification code too many times. You will not be able to enter the verification code again.';
+
+  @override
+  String get verify_wrong_code_many_time => 'You have entered the wrong code too many times.';
+
+  @override
+  String get verify_only_number => 'Only Number are allowed';
+
+  @override
+  String get minimum_limit_of_verification_code => 'The minimum limit of Verification code is 6 character';
+
+  @override
+  String verify_sent(String emailOrPhone) {
+    return 'We\'ve just sent you a verification code to $emailOrPhone. Please check your message and enter the code you received.';
+  }
+
+  @override
+  String request_verification_code(String aFewMinutesOr24Hours) {
+    return 'You have just request a verification code. Please wait $aFewMinutesOr24Hours before trying again after ';
+  }
+
+  @override
+  String please_try_again(String timeWaiting) {
+    return 'Please wait and try again after $timeWaiting';
+  }
+
+  @override
+  String get resend_code => 'Resend code';
+
+  @override
+  String get a_few_minutes => 'a few minutes';
+
+  @override
+  String get a_day => '24 hours';
+
+  @override
+  String get verification_code_sent => 'A verification code has been sent to your email\n';
+
+  @override
+  String get verification_code_required => 'Verification code is required';
+
+  @override
+  String get verify_transaction => 'Verify your transaction';
+
+  @override
+  String get verify_cannot_receive_code => 'Didn\'t get a code?';
+
+  @override
+  String get verify_caption_email => 'The code has been sent to the email';
+
+  @override
+  String get verify_caption_phone => 'The code has been sent to the phone number';
+
+  @override
+  String get verify_code_error_count => 'Verification code must be 6 characters';
+
+  @override
+  String get verify_code_error_incorrect => 'Incorrect verification code';
+
+  @override
+  String get verify_code_phone_email_caption => 'Enter the code we sent you';
+
+  @override
+  String get verify_code_required => 'Verification code is required';
+
+  @override
+  String get verify_confirm => 'Confirm';
+
+  @override
+  String get verify_error_block_account => 'Your account has been locked because the number of attempts to send a code exceeds the specified number of times';
+
+  @override
+  String get verify_error_code_time_out => 'Verification code has expired';
+
+  @override
+  String get verify_error_wrong_code => 'You entered the wrong code, please check and try again!';
+
+  @override
+  String get verify_input_code_hint => ' Enter the verification code';
+
+  @override
+  String get verify_resend_code_caption => 'Did not get the code?';
+
+  @override
+  String get verify_sign_in_another => 'Sign in with a different account';
+
+  @override
+  String get complete_transaction => 'Complete 2 steps below to finish your transaction';
+
+  @override
+  String get transfer_common => 'Transfer';
+
+  @override
+  String get transfer_title_status_info => 'Status Information';
+
+  @override
+  String get transfer_status_incomplete => 'Incomplete';
+
+  @override
+  String get transfer_content_status_processed => 'Your transaction request are being processed.';
+
+  @override
+  String get transfer_content_status_incomplete => 'You have not confirmed your transaction request.';
+
+  @override
+  String get transfer_transaction_question_cancel => 'Do you want to cancel this transaction?';
+
+  @override
+  String get transfer_title_step_1 => 'Amount';
+
+  @override
+  String get transfer_title_step_2 => 'Recipient';
+
+  @override
+  String get transfer_title_step_3 => 'Confirm';
+
+  @override
+  String get transfer_title_step_4 => 'Done';
+
+  @override
+  String get transfer_warning_empty_recipients => 'Empty banks Account';
+
+  @override
+  String get transfer_warning_empty_banks => 'Empty banks';
+
+  @override
+  String get transfer_menu => 'Transaction menu';
+
+  @override
+  String get transfer_cancel_transaction => 'Cancel transaction';
+
+  @override
+  String get transfer_warning_deleted => 'Incomplete transactions will be deleted after 24 hours';
+
+  @override
+  String get transfer_detail_item_id => 'Transaction ID';
+
+  @override
+  String get transfer_detail_item_time => 'Transaction time';
+
+  @override
+  String get transfer_detail_item_recipient_name => 'Recipient name';
+
+  @override
+  String get transfer_detail_item_recipient_type => 'Recipient type';
+
+  @override
+  String get transfer_detail_item_bank_account => 'Bank account';
+
+  @override
+  String get transfer_detail_item_bank_name => 'Bank name';
+
+  @override
+  String get transfer_detail_item_email => 'Email';
+
+  @override
+  String get transfer_detail_item_phone => 'Phone number';
+
+  @override
+  String get transfer_detail_item_des => 'Description';
+
+  @override
+  String get transfer_detail_item_status => 'Status';
+
+  @override
+  String get transfer_detail_item_amount => 'Amount';
+
+  @override
+  String get transfer_detail_item_exchange => 'Exchange rate';
+
+  @override
+  String get transfer_detail_item_total => 'Total to receiver';
+
+  @override
+  String get transfer_field_choose_country => 'Choose receiver’s country';
+
+  @override
+  String get transfer_warning_step_amount => 'Exchange rate might fluctuate during process';
+
+  @override
+  String get transfer_warning_err_step_amount_1 => 'Your account balance is insufficient for this transaction. Please send money to your Haloki account.';
+
+  @override
+  String get transfer_des_regulations => 'Description must be an alphanumeric string with at most 150 characters and must not contain any special characters.';
+
+  @override
+  String get transfer_label_btn_save_recipient => 'Save recipient for another transactions';
+
+  @override
+  String get transfer_label_recipient_bank_name => 'Recipient bank name';
+
+  @override
+  String get transfer_label_recipient_bank_number => 'Recipient bank account number';
+
+  @override
+  String get transfer_label_recipient_save => 'Saved recipients';
+
+  @override
+  String get transfer_label_transaction_amount => 'Transaction amount';
+
+  @override
+  String get transfer_amount => 'Transfer amount';
+
+  @override
+  String get transfer_label_bank_number => 'bank account number';
+
+  @override
+  String get transfer_recipient_info => 'Recipient information';
+
+  @override
+  String get transfer_successful_cancellation => 'Successful cancellation';
+
+  @override
+  String get transfer_text_notifier_cancellation => 'You had successfully canceled this transaction. Your money would expected to return your Haloki account soon.';
+
+  @override
+  String transfer_text_notifier_done(String transferAmount, String equalAmount) {
+    return 'You had transferred successfully $transferAmount (equal $equalAmount) to';
+  }
+
+  @override
+  String get transfer_text_err_description_format => 'Description contains only characters (a-z) or digits';
+
+  @override
+  String get transfer_text_err_description_length => 'Description is not more than 150 characters';
+
+  @override
+  String get transaction_history_title_transaction_history => 'Transaction History';
+
+  @override
+  String get transaction_history_title_tab_send_money => 'Send money';
+
+  @override
+  String get transaction_history_title_tab_transfer_money => 'Transfer money';
+
+  @override
+  String get transaction_history_title_status_information => 'Status information';
+
+  @override
+  String get transaction_history_title_transaction_information => 'Transaction information';
+
+  @override
+  String get transaction_history_title_transaction_id => 'Transaction Id';
+
+  @override
+  String get transaction_history_title_transaction_time => 'Transaction time';
+
+  @override
+  String get transaction_history_title_recipient_name => 'Recipient name';
+
+  @override
+  String get transaction_history_title_bank_account_number => 'Bank account number';
+
+  @override
+  String get transaction_history_title_recipient_type_account => 'Recipient type account';
+
+  @override
+  String get transaction_history_title_bank_name => 'Bank name';
+
+  @override
+  String get transaction_history_title_description => 'Description';
+
+  @override
+  String get transaction_history_title_status => 'Status';
+
+  @override
+  String get transaction_history_title_transaction_amount => 'Transaction amount';
+
+  @override
+  String get transaction_history_title_amount => 'Amount';
+
+  @override
+  String get transaction_history_title_connected_bank_account => 'Connected bank account (ACH) fee';
+
+  @override
+  String get transaction_history_title_our_fee => 'Our fee';
+
+  @override
+  String get transaction_history_title_total_fee => 'Total fees';
+
+  @override
+  String get transaction_history_title_total_haloki_acc => 'Total to Haloki account';
+
+  @override
+  String get transaction_history_title_transfer_amount => 'Transfer amount';
+
+  @override
+  String get transaction_history_title_exchange_rate => 'Exchange rate';
+
+  @override
+  String get transaction_history_title_total_to_receiver => 'Total to receiver';
+
+  @override
+  String get transaction_history_title_no_transaction_yet => 'No transaction yet';
+
+  @override
+  String get transaction_history_title_transaction_detail => 'Transaction detail';
+
+  @override
+  String get transaction_history_title_filter_send_money => 'Filter send money';
+
+  @override
+  String get transaction_history_title_filter_transfer_money => 'Filter transfer money';
+
+  @override
+  String get transaction_history_title_status_all => 'All';
+
+  @override
+  String get transaction_history_title_status_processing => 'Processing';
+
+  @override
+  String get transaction_history_title_status_success => 'Success';
+
+  @override
+  String get transaction_history_title_status_cancel => 'Cancel';
+
+  @override
+  String get transaction_history_title_status_denied => 'Denied';
+
+  @override
+  String get transaction_history_title_status_failed => 'Failed';
+
+  @override
+  String get transaction_history_title_action_btn_retry => 'Retry';
+
+  @override
+  String get transaction_history_filter_title_date_to => 'To';
+
+  @override
+  String get transaction_history_filter_title_date_from => 'From';
+
+  @override
+  String get transaction_history_title_action_btn_filter => 'Filter';
+
+  @override
+  String get transaction_history_title_action_btn_reset => 'Reset';
+
+  @override
+  String get transaction_history_title_action_btn_close => 'Close';
+
+  @override
+  String get transaction_history_title_dialog_status => 'Status send money history option?';
+
+  @override
+  String get transaction_history_define_processing => 'Transaction has been confirmed. We are processing your transaction.';
+
+  @override
+  String get transaction_history_define_success => 'Transaction has been completed successfully.';
+
+  @override
+  String get transaction_history_define_cancel => 'You have cancelled this transaction. All funds will be reversed.';
+
+  @override
+  String get transaction_history_define_denied => 'Your transaction request has been declined. Please view transaction details or contact our customer support for further information.';
+
+  @override
+  String get transaction_history_define_failed => 'Transaction has failed. All funds will be reversed. Please view transaction details or contact our customer support for further information.';
+
+  @override
+  String get transaction_history_sub_content_no_transaction_yet => 'Start transacting with your Haloki. All transactions made will be displayed here';
+
+  @override
+  String get sign_title_welcome => 'Welcome Haloki';
+
+  @override
+  String get sign_in => 'Đăng nhập';
+
+  @override
+  String get sign_enter_email_or_number => 'Email';
+
+  @override
+  String get sign_enter_password => 'Mật khẩu';
+
+  @override
+  String get sign_forgot_password => 'Quên mật khẩu?';
+
+  @override
+  String get sign_do_not_have_an_account => 'Bạn chưa có tài khoản?';
+
+  @override
+  String get sign_up => 'Đăng ký';
+
+  @override
+  String get sign_up_title => 'Tạo tài khoản';
+
+  @override
+  String get sign_up_first_name => 'Tên';
+
+  @override
+  String get sign_up_last_name => 'Họ';
+
+  @override
+  String get sign_confirm_password => 'Xác nhận mật khẩu';
+
+  @override
+  String get sign_back => 'Back';
+
+  @override
+  String get sign_text_policy => 'Bằng việc nhấp vào đăng ký, bạn xác nhận rằng bạn trên 18 tuổi và bạn đồng ý với các ';
+
+  @override
+  String get sign_term_of_Service => 'Điều khoản';
+
+  @override
+  String get sign_data_policy => 'Chính sách dịch vụ';
+
+  @override
+  String get sign_cookies_policy => 'Cookie của chúng tôi';
+
+  @override
+  String get sign_and => 'và';
+
+  @override
+  String get sign_community_standards => 'Tiêu chuẩn cộng đồng';
+
+  @override
+  String get sign_in_error_login_message => 'The login information provided does not match any accounts. Please try again';
+
+  @override
+  String get sign_in_error_login_negative => 'Try again';
+
+  @override
+  String get sign_up_account_blocked => 'This account has been blocked! We noticed some unusual activities on your account. To help protect you from fraud or abuse, we\\\'ve temporarily blocked this account.';
+
+  @override
+  String get sign_up_birthday_format => '%3s–%2s–%1s';
+
+  @override
+  String get sign_up_notify_account_exist => 'The account already exists, please use another phone number or email.';
+
+  @override
+  String get sign_up_password_length_error => 'Mật khẩu phải có ít nhất 6 ký tự';
+
+  @override
+  String get sign_up_password_length_more_128_error => 'The maximum limit of Password is 128 characters';
+
+  @override
+  String get sign_up_first_name_Invalid_error => 'Invalid first name';
+
+  @override
+  String get sign_up_last_name_Invalid_error => 'Invalid last name';
+
+  @override
+  String get sign_up_login_handler_button0 => 'Bạn đã có tài khoản?';
+
+  @override
+  String get validate_empty => 'Field require';
+
+  @override
+  String get validate_confirm_password => 'Xác nhận mật khẩu không khớp';
+
+  @override
+  String get validate_format => 'Invalid format';
+
+  @override
+  String get validate_format_email => 'Email không hợp lệ';
+
+  @override
+  String get validate_password => 'Password so easy';
+
+  @override
+  String get validate_last_name_require => 'Tên là bắt buộc';
+
+  @override
+  String get validate_first_name_require => 'Họ là bắt buộc';
+
+  @override
+  String get validate_email_require_for_search => 'Nhập email của bạn';
+
+  @override
+  String get error_unauthorized_message => 'Your login session has expired. Please log in again';
+
+  @override
+  String get error_unauthorized_title => 'Authentication failed';
+
+  @override
+  String get error_unauthorized_content_message => 'The login information provided does not match any accounts. Please try again';
+
+  @override
+  String get error_code_network_connection => 'SocketException: Network connection error';
+
+  @override
+  String get error_common => 'An error occurred. Please try again';
+
+  @override
+  String get error_network_title => 'Network failed';
+
+  @override
+  String get error_network_content_message => 'Network connection is interrupted. Please check your internet connection.';
+
+  @override
+  String get error_password_inconrect => 'Current password is incorrect.';
+
+  @override
+  String get error_message_sign_up => 'The account already exists, please use another email';
+
+  @override
+  String get error_title_sign_up => 'Sign up failure';
+
+  @override
+  String get error_acc_inconrect => 'We are unable to find your Haloki Account. Please contact customer support for more details.';
+
+  @override
+  String get error_message_acc_blocked => 'This account has been blocked! We noticed some unusual activities on your account. To help protect you from fraud or abuse, we\'ve temporarily blocked this account.';
+
+  @override
+  String get message_error_network_connection => 'The connection is being interrupted. Please check the connection again';
+
+  @override
+  String get setting_update_password_fail => 'Update password failure. Please try again later';
+
+  @override
+  String get setting_account_password => 'Account password';
+
+  @override
+  String get setting_account_password_description => 'It\'s a good idea to use a password that you haven\'t used elsewhere';
+
+  @override
+  String get setting_email_verify => 'The email address Haloki will use to verify your activities.';
+
+  @override
+  String get setting_email_verify_description => 'Email for verification';
+
+  @override
+  String get setting_delete_account => 'Delete account';
+
+  @override
+  String get setting_delete_account_description => 'When you delete your Haloki account, you won’t be able to restore or access your Haloki account.';
+
+  @override
+  String get setting_delete_account_learn_more => 'Learn more about what happens when I delete my account.';
+
+  @override
+  String get setting_change_pass_success => 'You have successfully changed your password';
+
+  @override
+  String get setting_change_pass_incorrect_pass => 'Incorrect password';
+
+  @override
+  String get setting_change_pass_same_pas => 'New password is same as old password';
+
+  @override
+  String get setting_change_pass_wrong_pass => 'Confirm password is wrong';
+
+  @override
+  String get something_went_wrong => 'Something went wrong. Please try again later';
+
+  @override
+  String get setting_changed_pass => 'Changed password';
+
+  @override
+  String get setting_change_pass => 'Change password';
+
+  @override
+  String get setting_change_pass_fail => 'Change password failed';
+
+  @override
+  String get setting_updated_info => 'Updated information';
+
+  @override
+  String get setting_updated_info_success => 'Your information has been successfully updated';
+
+  @override
+  String get setting_current_pass => 'Current password';
+
+  @override
+  String get setting_enter_pass => 'Enter password here';
+
+  @override
+  String get setting_new_pass => 'New password';
+
+  @override
+  String get setting_confirm_pass => 'Confirm new password';
+
+  @override
+  String get delete_account_zero => 'Important notices when you deleted your account:';
+
+  @override
+  String get delete_account_line_one => 'When you finish the account deletion process, you will {not} be able to sign in using this account.';
+
+  @override
+  String get delete_account_line_two => 'You will {not} be able to reopen your deleted account.';
+
+  @override
+  String get delete_account_line_three => 'Please ensure that you have cancelled any unwanted processing transaction before deleting your account.';
+
+  @override
+  String get delete_account_line_four => 'To have your {haloki} balance refunded, please submit a refund request. For more information about refunding your {haloki} balance, please visit {help} and look for Cancellation and Refund topic.';
+
+  @override
+  String get delete_account_line_five => 'If you want to open a different {haloki} account, you will be able to use the same credential as your deleted account.';
+
+  @override
+  String get find_your_account => 'Tìm tài khoản của bạn';
+
+  @override
+  String get please_enter_email => 'Vui lòng nhập email để tìm kiếm tài khoản của bạn';
+
+  @override
+  String get enter_email => 'Nhập email';
+
+  @override
+  String get confirm_your_account => 'Xác nhận tài khoản';
+
+  @override
+  String get send_otp_recover => 'Chúng tôi sẽ gửi cho bạn mã xác nhận trước khi bạn đặt lại mật khẩu mới';
+
+  @override
+  String get confirm_via_email => 'Xác nhận qua email';
+
+  @override
+  String get enter_your_code => 'Enter the code we sent to';
+
+  @override
+  String get not_yet_received_code => 'You have not received a confirmation code yet?';
+
+  @override
+  String get reset_password => 'Reset password';
+
+  @override
+  String get please_enter_password => 'Please enter a new password';
+
+  @override
+  String get enter_new_password => 'Enter new password';
+
+  @override
+  String get re_enter_new_password => 'Re-enter new password';
+
+  @override
+  String get account_recovered_title => 'Account recovered';
+
+  @override
+  String get account_recovered_content => 'You have recovered your account successfully.';
+
+  @override
+  String get validate_email_require => 'Email là bắt buộc';
+
+  @override
+  String get validate_password_require => 'Mật khẩu là bắt buộc';
+
+  @override
+  String get validate_confirm_password_require => 'Bạn cần phải nhập xác nhận mật khẩu';
+
+  @override
+  String get common_personal => 'Personal';
+
+  @override
+  String get common_account_type => 'Account Type';
+
+  @override
+  String get common_address => 'Address';
+
+  @override
+  String get common_gender => 'Gender';
+
+  @override
+  String get common_full_name => 'Full name';
+
+  @override
+  String get common_unknown => 'Unknown';
+
+  @override
+  String validate_max_length(String fieldName, int number) {
+    return 'The maximum length of the $fieldName is $number characters.';
+  }
+
+  @override
   String get common_try_again => 'Thử lại';
 
   @override
@@ -111,24 +796,6 @@ class StrVi extends Str {
 
   @override
   String get common_postpaid => 'Trả sau';
-
-  @override
-  String get common_personal => 'Personal';
-
-  @override
-  String get common_account_type => 'Account Type';
-
-  @override
-  String get common_address => 'Address';
-
-  @override
-  String get common_gender => 'Gender';
-
-  @override
-  String get common_full_name => 'Full name';
-
-  @override
-  String get common_unknown => 'Unknown';
 
   @override
   String get common_yes => 'Yes';
@@ -278,6 +945,12 @@ class StrVi extends Str {
   String get amount => 'Amount';
 
   @override
+  String get confirm => 'Confirm';
+
+  @override
+  String get done => 'Done';
+
+  @override
   String get review => 'Review';
 
   @override
@@ -327,6 +1000,21 @@ class StrVi extends Str {
 
   @override
   String get amount_descriptions_trailing => 'to your Haloki account within the next 5 business days.';
+
+  @override
+  String get send_money_error_3000 => 'You have exceeded your annual transaction limit of 1000 USD per year.';
+
+  @override
+  String get send_money_error_3019 => 'The linked bank account does not exist or could not be accessed. Please contact your bank customer support for more details.';
+
+  @override
+  String get send_money_error_3001_1 => 'The sending amount must be from';
+
+  @override
+  String get send_money_error_3001_2 => 'to';
+
+  @override
+  String get send_money_error_2010 => 'The sending amount is smaller than the minimum fee. Please choose a larger amount to send.';
 
   @override
   String get confirmation_body_leading => 'Your request for sending money from your bank account';
@@ -482,15 +1170,6 @@ class StrVi extends Str {
   String get account => 'Account';
 
   @override
-  String get resend_code => 'Resend code';
-
-  @override
-  String get a_few_minutes => 'a few minutes';
-
-  @override
-  String get a_day => '24 hours';
-
-  @override
   String get verify_your_information => 'Verify your information';
 
   @override
@@ -504,115 +1183,6 @@ class StrVi extends Str {
 
   @override
   String get bank_account_link_bank_warn => 'Link your bank account to start making transaction.';
-
-  @override
-  String get sign_title_welcome => 'Welcome Haloki';
-
-  @override
-  String get sign_in => 'Đăng nhập';
-
-  @override
-  String get sign_enter_email_or_number => 'Email';
-
-  @override
-  String get sign_enter_password => 'Mật khẩu';
-
-  @override
-  String get sign_forgot_password => 'Quên mật khẩu?';
-
-  @override
-  String get sign_do_not_have_an_account => 'Bạn chưa có tài khoản?';
-
-  @override
-  String get sign_up => 'Đăng ký';
-
-  @override
-  String get sign_up_title => 'Tạo tài khoản';
-
-  @override
-  String get sign_up_first_name => 'Tên';
-
-  @override
-  String get sign_up_last_name => 'Họ';
-
-  @override
-  String get sign_confirm_password => 'Xác nhận mật khẩu';
-
-  @override
-  String get sign_back => 'Back';
-
-  @override
-  String get sign_text_policy => 'Bằng việc nhấp vào đăng ký, bạn xác nhận rằng bạn trên 18 tuổi và bạn đồng ý với các ';
-
-  @override
-  String get sign_term_of_Service => 'Điều khoản';
-
-  @override
-  String get sign_data_policy => 'Chính sách dịch vụ';
-
-  @override
-  String get sign_cookies_policy => 'Cookie của chúng tôi';
-
-  @override
-  String get sign_and => 'và';
-
-  @override
-  String get sign_community_standards => 'Tiêu chuẩn cộng đồng';
-
-  @override
-  String get sign_in_error_login_message => 'The login information provided does not match any accounts. Please try again';
-
-  @override
-  String get sign_in_error_login_negative => 'Try again';
-
-  @override
-  String get sign_up_account_blocked => 'This account has been blocked! We noticed some unusual activities on your account. To help protect you from fraud or abuse, we\\\'ve temporarily blocked this account.';
-
-  @override
-  String get sign_up_birthday_format => '%3s–%2s–%1s';
-
-  @override
-  String get sign_up_notify_account_exist => 'The account already exists, please use another phone number or email.';
-
-  @override
-  String get sign_up_password_length_error => 'Mật khẩu phải có ít nhất 6 ký tự';
-
-  @override
-  String get sign_up_password_length_more_128_error => 'The maxiumun limit of Password is 128 characters';
-
-  @override
-  String get sign_up_first_name_Invalid_error => 'Invalid first name';
-
-  @override
-  String get sign_up_last_name_Invalid_error => 'Invalid last name';
-
-  @override
-  String get sign_up_login_handler_button0 => 'Bạn đã có tài khoản?';
-
-  @override
-  String get validate_empty => 'Field require';
-
-  @override
-  String get validate_confirm_password => 'Xác nhận mật khẩu không khớp';
-
-  @override
-  String get validate_format => 'Invalid format';
-
-  @override
-  String get validate_format_email => 'Email không hợp lệ';
-
-  @override
-  String get validate_password => 'Password so easy';
-
-  @override
-  String validate_max_length(String fieldName, int number) {
-    return 'The maximum length of the $fieldName is $number characters.';
-  }
-
-  @override
-  String validate_required(String fieldName) {
-    return '$fieldName is required';
-  }
 
   @override
   String get account_edit_information => 'Edit information';
@@ -720,446 +1290,14 @@ class StrVi extends Str {
   String get account_label_field_middle_name => 'Middle name';
 
   @override
-  String get text_language => 'Ngôn ngữ';
+  String get account_notifier_err_edit_information => 'Please check the information again';
 
   @override
-  String get select_language => 'Chọn ngôn ngữ';
+  String get account_cancel_edit_information => 'Cancel edit information';
 
   @override
-  String get permission_denied_title => 'Permission denied';
+  String get account_cancel_edit_information_content => 'All unsaved information will be lost. Are you sure you want to leave?';
 
   @override
-  String get permission_denied_content => 'permission was denied, but is needed for core functionality';
-
-  @override
-  String get recent_transactions => 'Recent transactions';
-
-  @override
-  String get view_all => 'View all';
-
-  @override
-  String get no_transaction => 'No transaction yet';
-
-  @override
-  String get no_link_bank_account => 'No link bank account';
-
-  @override
-  String get error_unauthorized_message => 'Your login session has expired. Please log in again';
-
-  @override
-  String get error_unauthorized_title => 'Authentication failed';
-
-  @override
-  String get error_network_title => 'Network failed';
-
-  @override
-  String get error_unauthorized_content_message => 'The login informaion provided does not match any accounts. Please try again';
-
-  @override
-  String get error_network_content_message => 'Network connection is interrupted. Please check your internet connection.';
-
-  @override
-  String get error_code_network_connection => 'SocketException: Network connection error';
-
-  @override
-  String get error_common => 'An error occurred. Please try again';
-
-  @override
-  String get message_error_network_connection => 'The connection is being interrupted. Please check the connection again';
-
-  @override
-  String get password_star => 'Password*';
-
-  @override
-  String get enter_verification_code => 'Enter a verification code';
-
-  @override
-  String get verification_code_has_been_sent => 'A verification code has been sent  to your email';
-
-  @override
-  String get delete_account => 'Delete account';
-
-  @override
-  String get account_delete_title => 'Account deleted';
-
-  @override
-  String get account_delete_content => 'You have deleted your account successfully.';
-
-  @override
-  String get enter_password => 'Enter password';
-
-  @override
-  String get password_incorrect => 'The password is incorrect';
-
-  @override
-  String get complete_two_step_delete_account => 'Complete 2 steps below to delete your account';
-
-  @override
-  String get find_your_account => 'Tìm tài khoản của bạn';
-
-  @override
-  String get please_enter_email => 'Vui lòng nhập email để tìm kiếm tài khoản của bạn';
-
-  @override
-  String get enter_email => 'Nhập email';
-
-  @override
-  String get confirm_your_account => 'Xác nhận tài khoản';
-
-  @override
-  String get send_otp_recover => 'Chúng tôi sẽ gửi cho bạn mã xác nhận trước khi bạn đặt lại mật khẩu mới';
-
-  @override
-  String get confirm_via_email => 'Xác nhận qua email';
-
-  @override
-  String get enter_your_code => 'Enter the code we sent to';
-
-  @override
-  String get not_yet_received_code => 'You have not received a confirmation code yet?';
-
-  @override
-  String get reset_password => 'Reset password';
-
-  @override
-  String get please_enter_password => 'Please enter a new password';
-
-  @override
-  String get enter_new_password => 'Enter new password';
-
-  @override
-  String get re_enter_new_password => 'Re-enter new password';
-
-  @override
-  String get account_recovered_title => 'Account recovered';
-
-  @override
-  String get account_recovered_content => 'You have recovered your account successfully.';
-
-  @override
-  String get validate_email_require => 'Email là bắt buộc';
-
-  @override
-  String get validate_password_require => 'Mật khẩu là bắt buộc';
-
-  @override
-  String get validate_confirm_password_require => 'Bạn cần phải nhập xác nhận mật khẩu';
-
-  @override
-  String get validate_last_name_require => 'Tên là bắt buộc';
-
-  @override
-  String get validate_first_name_require => 'Họ là bắt buộc';
-
-  @override
-  String get validate_email_require_for_search => 'Nhập email của bạn';
-
-  @override
-  String get verify_error_common => 'The verification code is incorrect';
-
-  @override
-  String get verify_error_waiting_minutes => 'You have just requested a verification code. Please wait a few minutes before trying again.';
-
-  @override
-  String get verify_error_waiting_24h => 'You have requested for new verification code too many times. Please wait 24 hours before trying again.';
-
-  @override
-  String get verify_error_code_is_expired => 'Your verification code has been expired. Please choose \"resend code\" to recieve a new verification code.';
-
-  @override
-  String get verify_error_invalid_value => 'Có lỗi xảy ra, vui lòng thử lại.';
-
-  @override
-  String get verify_error_max_verified => 'You have attempted to enter the verification code too many times. You will not be able to enter the verification code again.';
-
-  @override
-  String get verify_request_many_times => 'You have request a verification code too many times. Please wait before trying again after ';
-
-  @override
-  String get verify_expire => 'The verification code will expire in 05:00';
-
-  @override
-  String get verify_no_receive => 'Didn’t receive the verification code';
-
-  @override
-  String get verify_wrong_code_many_time => 'You have entered the wrong code too many times.';
-
-  @override
-  String get verify_only_number => 'Only Number are allowed';
-
-  @override
-  String get verification_code_sent => 'A verification code has been sent to your email :\n';
-
-  @override
-  String get verification_code_required => 'Verification code is required';
-
-  @override
-  String get minimum_limit_of_verification_code => 'The minimum limit of Verification code is 6 character';
-
-  @override
-  String verify_sent(String emailOrPhone) {
-    return 'We\'ve just sent you a verification code to $emailOrPhone. Please check your message and enter the code you received.';
-  }
-
-  @override
-  String request_verification_code(String aFewMinutesOr24Hours) {
-    return 'You have just request a verification code. Please wait $aFewMinutesOr24Hours before trying again after ';
-  }
-
-  @override
-  String please_try_again(String timeWaiting) {
-    return 'Please try again in $timeWaiting';
-  }
-
-  @override
-  String get delete_account_zero => 'Important notices when you deleted your account:';
-
-  @override
-  String get delete_account_line_one => 'When you finish the account deletion process, you will {not} be able to sign in using this account.';
-
-  @override
-  String get delete_account_line_two => 'You will {not} be able to reopen your deleted account.';
-
-  @override
-  String get delete_account_line_three => 'Please ensure that you have cancelled any unwanted processing transaction before deleting your account.';
-
-  @override
-  String get delete_account_line_four => 'To have your {haloki} balance refunded, please submit a refund request. For more information about refunding your {haloki} balance, please visit {help} and look for Cancellation and Refund topic.';
-
-  @override
-  String get delete_account_line_five => 'If you want to open a different {haloki} account, you will be able to use the same credential as your deleted account.';
-
-  @override
-  String get verify_transaction => 'Verify your transaction';
-
-  @override
-  String get complete_transaction => 'Complete 2 steps below to finish your transaction';
-
-  @override
-  String get transfer_common => 'Transfer';
-
-  @override
-  String get transfer_title_status_info => 'Status Information';
-
-  @override
-  String get transfer_status_incomplete => 'Incomplete';
-
-  @override
-  String get transfer_content_status_processed => 'Your transaction request are being processed.';
-
-  @override
-  String get transfer_content_status_incomplete => 'You have not confirmed your transaction request.';
-
-  @override
-  String get transfer_transaction_question_cancel => 'Do you want to cancel this transaction?';
-
-  @override
-  String get transfer_title_step_1 => 'Amount';
-
-  @override
-  String get transfer_title_step_2 => 'Recipient';
-
-  @override
-  String get transfer_title_step_3 => 'Review';
-
-  @override
-  String get transfer_title_step_4 => 'Confirmation';
-
-  @override
-  String get transfer_warning_empty_recipients => 'Empty banks Account';
-
-  @override
-  String get transfer_warning_empty_banks => 'Empty banks';
-
-  @override
-  String get transfer_menu => 'Transaction menu';
-
-  @override
-  String get transfer_cancel_transaction => 'Cancel transaction';
-
-  @override
-  String get transfer_warning_deleted => 'Incomplete transactions will be deleted after 24 hours';
-
-  @override
-  String get transfer_detail_item_id => 'Transaction ID';
-
-  @override
-  String get transfer_detail_item_time => 'Transaction time';
-
-  @override
-  String get transfer_detail_item_recipient_name => 'Recipient name';
-
-  @override
-  String get transfer_detail_item_recipient_type => 'Recipient type';
-
-  @override
-  String get transfer_detail_item_bank_account => 'Bank account';
-
-  @override
-  String get transfer_detail_item_bank_name => 'Bank name';
-
-  @override
-  String get transfer_detail_item_email => 'Email';
-
-  @override
-  String get transfer_detail_item_phone => 'Phone number';
-
-  @override
-  String get transfer_detail_item_des => 'Description';
-
-  @override
-  String get transfer_detail_item_status => 'Status';
-
-  @override
-  String get transfer_detail_item_amount => 'Amount';
-
-  @override
-  String get transfer_detail_item_exchange => 'Exchange rate';
-
-  @override
-  String get transfer_detail_item_total => 'Total to receiver';
-
-  @override
-  String get transfer_field_choose_country => 'Choose receiver’s country';
-
-  @override
-  String get transfer_warning_step_amount => 'Exchange rate might fluctuate during process';
-
-  @override
-  String get transfer_warning_err_step_amount_1 => 'Your account balance is insufficient for this transaction. Please send money to your Haloki account.';
-
-  @override
-  String get transfer_des_regulations => 'Description must be an alphanumeric string with at most 150 characters and must not contain any special characters.';
-
-  @override
-  String get transfer_label_btn_save_recipient => 'Save recipient for another transactions';
-
-  @override
-  String get transfer_label_recipient_bank_name => 'Recipient bank name';
-
-  @override
-  String get transfer_label_recipient_bank_number => 'Recipient bank account number';
-
-  @override
-  String get transfer_label_recipient_save => 'Saved recipients';
-
-  @override
-  String get transfer_label_transaction_amount => 'Transaction amount';
-
-  @override
-  String get transfer_amount => 'Transfer amount';
-
-  @override
-  String get transfer_label_bank_number => 'bank account number';
-
-  @override
-  String get transfer_recipient_info => 'Recipient information';
-
-  @override
-  String get verify_cannot_receive_code => 'Didn\'t get a code?';
-
-  @override
-  String get verify_caption_email => 'The code has been sent to the email';
-
-  @override
-  String get verify_caption_phone => 'The code has been sent to the phone number';
-
-  @override
-  String get verify_code_error_count => 'Verification code must be 6 characters';
-
-  @override
-  String get verify_code_error_incorrect => 'Incorrect verification code';
-
-  @override
-  String get verify_code_phone_email_caption => 'Enter the code we sent you';
-
-  @override
-  String get verify_code_required => 'Verification code is required';
-
-  @override
-  String get verify_confirm => 'Confirm';
-
-  @override
-  String get verify_error_block_account => 'Your account has been locked because the number of attempts to send a code exceeds the specified number of times';
-
-  @override
-  String get verify_error_code_time_out => 'Verification code has expired';
-
-  @override
-  String get verify_error_wrong_code => 'You entered the wrong code, please check and try again!';
-
-  @override
-  String get verify_input_code_hint => ' Enter the verification code';
-
-  @override
-  String get verify_resend_code_caption => 'Did not get the code?';
-
-  @override
-  String get verify_sign_in_another => 'Sign in with a different account';
-
-  @override
-  String get setting_update_password_fail => 'Update password failure. Please try again later';
-
-  @override
-  String get setting_account_password => 'Account password';
-
-  @override
-  String get setting_account_password_description => 'It’s a good idea to use a password that you don’t use else where';
-
-  @override
-  String get setting_email_verify => 'The email address Haloki will use to verify your activities.';
-
-  @override
-  String get setting_email_verify_description => 'Email for verification';
-
-  @override
-  String get setting_delete_account => 'Delete account';
-
-  @override
-  String get setting_delete_account_description => 'When you delete your Haloki account, you won’t be able to restore or access your Haloki account.';
-
-  @override
-  String get setting_delete_account_learn_more => 'Learn more about what happen when I delete my account.';
-
-  @override
-  String get setting_change_pass_success => 'You have successfully changed your password';
-
-  @override
-  String get setting_change_pass_incorrect_pass => 'Incorrect password';
-
-  @override
-  String get setting_change_pass_same_pas => 'New password is same as old password';
-
-  @override
-  String get setting_change_pass_wrong_pass => 'Confirm password is wrong';
-
-  @override
-  String get something_went_wrong => 'Something went wrong. Please try again later';
-
-  @override
-  String get setting_changed_pass => 'Changed password';
-
-  @override
-  String get setting_change_pass => 'Change password';
-
-  @override
-  String get setting_change_pass_fail => 'Change password failed';
-
-  @override
-  String get setting_updated_info => 'Updated information';
-
-  @override
-  String get setting_updated_info_success => 'Your information has been successfully updated';
-
-  @override
-  String get setting_current_pass => 'Current password';
-
-  @override
-  String get setting_enter_pass => 'Enter password here';
-
-  @override
-  String get setting_new_pass => 'New password';
-
-  @override
-  String get setting_confirm_pass => 'Confirm new password';
+  String get boarding_learn_more => 'Learn more';
 }

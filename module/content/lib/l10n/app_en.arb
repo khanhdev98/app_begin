@@ -497,5 +497,6 @@
   "account_notifier_err_edit_information": "Please check the information again",
   "account_cancel_edit_information": "Cancel edit information",
   "account_cancel_edit_information_content": "All unsaved information will be lost. Are you sure you want to leave?",
-  "@_AccountInformationEnd__________________________________________________________________________": {}
+  "@_AccountInformationEnd__________________________________________________________________________": {},
+  "boarding_learn_more": "Learn more"
 }

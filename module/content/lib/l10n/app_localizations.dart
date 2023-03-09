@@ -93,6 +93,1356 @@ abstract class Str {
     Locale('vi')
   ];
 
+  /// No description provided for @verify_error_common.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred. Please try again'**
+  String get verify_error_common;
+
+  /// No description provided for @verify_error_incorrect.
+  ///
+  /// In en, this message translates to:
+  /// **'The verification code is incorrect'**
+  String get verify_error_incorrect;
+
+  /// No description provided for @verify_error_waiting_minutes.
+  ///
+  /// In en, this message translates to:
+  /// **'You have just requested a verification code. Please wait a few minutes before trying again.'**
+  String get verify_error_waiting_minutes;
+
+  /// No description provided for @verify_error_waiting_24h.
+  ///
+  /// In en, this message translates to:
+  /// **'You have requested for new verification code too many times. Please wait 24 hours before trying again.'**
+  String get verify_error_waiting_24h;
+
+  /// No description provided for @verify_error_code_is_expired.
+  ///
+  /// In en, this message translates to:
+  /// **'Your verification code has been expired. Please choose \"resend code\" to receive a new verification code.'**
+  String get verify_error_code_is_expired;
+
+  /// No description provided for @verify_error_invalid_value.
+  ///
+  /// In en, this message translates to:
+  /// **'There has been an unexpected error. Please try again.'**
+  String get verify_error_invalid_value;
+
+  /// No description provided for @verify_error_max_verified.
+  ///
+  /// In en, this message translates to:
+  /// **'You have attempted to enter the verification code too many times. You will not be able to enter the verification code again.'**
+  String get verify_error_max_verified;
+
+  /// No description provided for @verify_wrong_code_many_time.
+  ///
+  /// In en, this message translates to:
+  /// **'You have entered the wrong code too many times.'**
+  String get verify_wrong_code_many_time;
+
+  /// No description provided for @verify_only_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Only Number are allowed'**
+  String get verify_only_number;
+
+  /// No description provided for @minimum_limit_of_verification_code.
+  ///
+  /// In en, this message translates to:
+  /// **'The minimum limit of Verification code is 6 character'**
+  String get minimum_limit_of_verification_code;
+
+  /// No description provided for @verify_sent.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'ve just sent you a verification code to {emailOrPhone}. Please check your message and enter the code you received.'**
+  String verify_sent(String emailOrPhone);
+
+  /// No description provided for @request_verification_code.
+  ///
+  /// In en, this message translates to:
+  /// **'You have just request a verification code. Please wait {aFewMinutesOr24Hours} before trying again after '**
+  String request_verification_code(String aFewMinutesOr24Hours);
+
+  /// No description provided for @please_try_again.
+  ///
+  /// In en, this message translates to:
+  /// **'Please wait and try again after {timeWaiting}'**
+  String please_try_again(String timeWaiting);
+
+  /// No description provided for @resend_code.
+  ///
+  /// In en, this message translates to:
+  /// **'Resend code'**
+  String get resend_code;
+
+  /// No description provided for @a_few_minutes.
+  ///
+  /// In en, this message translates to:
+  /// **'a few minutes'**
+  String get a_few_minutes;
+
+  /// No description provided for @a_day.
+  ///
+  /// In en, this message translates to:
+  /// **'24 hours'**
+  String get a_day;
+
+  /// No description provided for @verification_code_sent.
+  ///
+  /// In en, this message translates to:
+  /// **'A verification code has been sent to your email\n'**
+  String get verification_code_sent;
+
+  /// No description provided for @verification_code_required.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification code is required'**
+  String get verification_code_required;
+
+  /// No description provided for @verify_transaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Verify your transaction'**
+  String get verify_transaction;
+
+  /// No description provided for @verify_cannot_receive_code.
+  ///
+  /// In en, this message translates to:
+  /// **'Didn\'t get a code?'**
+  String get verify_cannot_receive_code;
+
+  /// No description provided for @verify_caption_email.
+  ///
+  /// In en, this message translates to:
+  /// **'The code has been sent to the email'**
+  String get verify_caption_email;
+
+  /// No description provided for @verify_caption_phone.
+  ///
+  /// In en, this message translates to:
+  /// **'The code has been sent to the phone number'**
+  String get verify_caption_phone;
+
+  /// No description provided for @verify_code_error_count.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification code must be 6 characters'**
+  String get verify_code_error_count;
+
+  /// No description provided for @verify_code_error_incorrect.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect verification code'**
+  String get verify_code_error_incorrect;
+
+  /// No description provided for @verify_code_phone_email_caption.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the code we sent you'**
+  String get verify_code_phone_email_caption;
+
+  /// No description provided for @verify_code_required.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification code is required'**
+  String get verify_code_required;
+
+  /// No description provided for @verify_confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get verify_confirm;
+
+  /// No description provided for @verify_error_block_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Your account has been locked because the number of attempts to send a code exceeds the specified number of times'**
+  String get verify_error_block_account;
+
+  /// No description provided for @verify_error_code_time_out.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification code has expired'**
+  String get verify_error_code_time_out;
+
+  /// No description provided for @verify_error_wrong_code.
+  ///
+  /// In en, this message translates to:
+  /// **'You entered the wrong code, please check and try again!'**
+  String get verify_error_wrong_code;
+
+  /// No description provided for @verify_input_code_hint.
+  ///
+  /// In en, this message translates to:
+  /// **' Enter the verification code'**
+  String get verify_input_code_hint;
+
+  /// No description provided for @verify_resend_code_caption.
+  ///
+  /// In en, this message translates to:
+  /// **'Did not get the code?'**
+  String get verify_resend_code_caption;
+
+  /// No description provided for @verify_sign_in_another.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in with a different account'**
+  String get verify_sign_in_another;
+
+  /// No description provided for @complete_transaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Complete 2 steps below to finish your transaction'**
+  String get complete_transaction;
+
+  /// No description provided for @transfer_common.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer'**
+  String get transfer_common;
+
+  /// No description provided for @transfer_title_status_info.
+  ///
+  /// In en, this message translates to:
+  /// **'Status Information'**
+  String get transfer_title_status_info;
+
+  /// No description provided for @transfer_status_incomplete.
+  ///
+  /// In en, this message translates to:
+  /// **'Incomplete'**
+  String get transfer_status_incomplete;
+
+  /// No description provided for @transfer_content_status_processed.
+  ///
+  /// In en, this message translates to:
+  /// **'Your transaction request are being processed.'**
+  String get transfer_content_status_processed;
+
+  /// No description provided for @transfer_content_status_incomplete.
+  ///
+  /// In en, this message translates to:
+  /// **'You have not confirmed your transaction request.'**
+  String get transfer_content_status_incomplete;
+
+  /// No description provided for @transfer_transaction_question_cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to cancel this transaction?'**
+  String get transfer_transaction_question_cancel;
+
+  /// No description provided for @transfer_title_step_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get transfer_title_step_1;
+
+  /// No description provided for @transfer_title_step_2.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient'**
+  String get transfer_title_step_2;
+
+  /// No description provided for @transfer_title_step_3.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get transfer_title_step_3;
+
+  /// No description provided for @transfer_title_step_4.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get transfer_title_step_4;
+
+  /// No description provided for @transfer_warning_empty_recipients.
+  ///
+  /// In en, this message translates to:
+  /// **'Empty banks Account'**
+  String get transfer_warning_empty_recipients;
+
+  /// No description provided for @transfer_warning_empty_banks.
+  ///
+  /// In en, this message translates to:
+  /// **'Empty banks'**
+  String get transfer_warning_empty_banks;
+
+  /// No description provided for @transfer_menu.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction menu'**
+  String get transfer_menu;
+
+  /// No description provided for @transfer_cancel_transaction.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel transaction'**
+  String get transfer_cancel_transaction;
+
+  /// No description provided for @transfer_warning_deleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Incomplete transactions will be deleted after 24 hours'**
+  String get transfer_warning_deleted;
+
+  /// No description provided for @transfer_detail_item_id.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction ID'**
+  String get transfer_detail_item_id;
+
+  /// No description provided for @transfer_detail_item_time.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction time'**
+  String get transfer_detail_item_time;
+
+  /// No description provided for @transfer_detail_item_recipient_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient name'**
+  String get transfer_detail_item_recipient_name;
+
+  /// No description provided for @transfer_detail_item_recipient_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient type'**
+  String get transfer_detail_item_recipient_type;
+
+  /// No description provided for @transfer_detail_item_bank_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank account'**
+  String get transfer_detail_item_bank_account;
+
+  /// No description provided for @transfer_detail_item_bank_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank name'**
+  String get transfer_detail_item_bank_name;
+
+  /// No description provided for @transfer_detail_item_email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get transfer_detail_item_email;
+
+  /// No description provided for @transfer_detail_item_phone.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone number'**
+  String get transfer_detail_item_phone;
+
+  /// No description provided for @transfer_detail_item_des.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get transfer_detail_item_des;
+
+  /// No description provided for @transfer_detail_item_status.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get transfer_detail_item_status;
+
+  /// No description provided for @transfer_detail_item_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get transfer_detail_item_amount;
+
+  /// No description provided for @transfer_detail_item_exchange.
+  ///
+  /// In en, this message translates to:
+  /// **'Exchange rate'**
+  String get transfer_detail_item_exchange;
+
+  /// No description provided for @transfer_detail_item_total.
+  ///
+  /// In en, this message translates to:
+  /// **'Total to receiver'**
+  String get transfer_detail_item_total;
+
+  /// No description provided for @transfer_field_choose_country.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose receiver’s country'**
+  String get transfer_field_choose_country;
+
+  /// No description provided for @transfer_warning_step_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Exchange rate might fluctuate during process'**
+  String get transfer_warning_step_amount;
+
+  /// No description provided for @transfer_warning_err_step_amount_1.
+  ///
+  /// In en, this message translates to:
+  /// **'Your account balance is insufficient for this transaction. Please send money to your Haloki account.'**
+  String get transfer_warning_err_step_amount_1;
+
+  /// No description provided for @transfer_des_regulations.
+  ///
+  /// In en, this message translates to:
+  /// **'Description must be an alphanumeric string with at most 150 characters and must not contain any special characters.'**
+  String get transfer_des_regulations;
+
+  /// No description provided for @transfer_label_btn_save_recipient.
+  ///
+  /// In en, this message translates to:
+  /// **'Save recipient for another transactions'**
+  String get transfer_label_btn_save_recipient;
+
+  /// No description provided for @transfer_label_recipient_bank_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient bank name'**
+  String get transfer_label_recipient_bank_name;
+
+  /// No description provided for @transfer_label_recipient_bank_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient bank account number'**
+  String get transfer_label_recipient_bank_number;
+
+  /// No description provided for @transfer_label_recipient_save.
+  ///
+  /// In en, this message translates to:
+  /// **'Saved recipients'**
+  String get transfer_label_recipient_save;
+
+  /// No description provided for @transfer_label_transaction_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction amount'**
+  String get transfer_label_transaction_amount;
+
+  /// No description provided for @transfer_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer amount'**
+  String get transfer_amount;
+
+  /// No description provided for @transfer_label_bank_number.
+  ///
+  /// In en, this message translates to:
+  /// **'bank account number'**
+  String get transfer_label_bank_number;
+
+  /// No description provided for @transfer_recipient_info.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient information'**
+  String get transfer_recipient_info;
+
+  /// No description provided for @transfer_successful_cancellation.
+  ///
+  /// In en, this message translates to:
+  /// **'Successful cancellation'**
+  String get transfer_successful_cancellation;
+
+  /// No description provided for @transfer_text_notifier_cancellation.
+  ///
+  /// In en, this message translates to:
+  /// **'You had successfully canceled this transaction. Your money would expected to return your Haloki account soon.'**
+  String get transfer_text_notifier_cancellation;
+
+  /// No description provided for @transfer_text_notifier_done.
+  ///
+  /// In en, this message translates to:
+  /// **'You had transferred successfully {transferAmount} (equal {equalAmount}) to'**
+  String transfer_text_notifier_done(String transferAmount, String equalAmount);
+
+  /// No description provided for @transfer_text_err_description_format.
+  ///
+  /// In en, this message translates to:
+  /// **'Description contains only characters (a-z) or digits'**
+  String get transfer_text_err_description_format;
+
+  /// No description provided for @transfer_text_err_description_length.
+  ///
+  /// In en, this message translates to:
+  /// **'Description is not more than 150 characters'**
+  String get transfer_text_err_description_length;
+
+  /// No description provided for @transaction_history_title_transaction_history.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction History'**
+  String get transaction_history_title_transaction_history;
+
+  /// No description provided for @transaction_history_title_tab_send_money.
+  ///
+  /// In en, this message translates to:
+  /// **'Send money'**
+  String get transaction_history_title_tab_send_money;
+
+  /// No description provided for @transaction_history_title_tab_transfer_money.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer money'**
+  String get transaction_history_title_tab_transfer_money;
+
+  /// No description provided for @transaction_history_title_status_information.
+  ///
+  /// In en, this message translates to:
+  /// **'Status information'**
+  String get transaction_history_title_status_information;
+
+  /// No description provided for @transaction_history_title_transaction_information.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction information'**
+  String get transaction_history_title_transaction_information;
+
+  /// No description provided for @transaction_history_title_transaction_id.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction Id'**
+  String get transaction_history_title_transaction_id;
+
+  /// No description provided for @transaction_history_title_transaction_time.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction time'**
+  String get transaction_history_title_transaction_time;
+
+  /// No description provided for @transaction_history_title_recipient_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient name'**
+  String get transaction_history_title_recipient_name;
+
+  /// No description provided for @transaction_history_title_bank_account_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank account number'**
+  String get transaction_history_title_bank_account_number;
+
+  /// No description provided for @transaction_history_title_recipient_type_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Recipient type account'**
+  String get transaction_history_title_recipient_type_account;
+
+  /// No description provided for @transaction_history_title_bank_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Bank name'**
+  String get transaction_history_title_bank_name;
+
+  /// No description provided for @transaction_history_title_description.
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get transaction_history_title_description;
+
+  /// No description provided for @transaction_history_title_status.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get transaction_history_title_status;
+
+  /// No description provided for @transaction_history_title_transaction_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction amount'**
+  String get transaction_history_title_transaction_amount;
+
+  /// No description provided for @transaction_history_title_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Amount'**
+  String get transaction_history_title_amount;
+
+  /// No description provided for @transaction_history_title_connected_bank_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Connected bank account (ACH) fee'**
+  String get transaction_history_title_connected_bank_account;
+
+  /// No description provided for @transaction_history_title_our_fee.
+  ///
+  /// In en, this message translates to:
+  /// **'Our fee'**
+  String get transaction_history_title_our_fee;
+
+  /// No description provided for @transaction_history_title_total_fee.
+  ///
+  /// In en, this message translates to:
+  /// **'Total fees'**
+  String get transaction_history_title_total_fee;
+
+  /// No description provided for @transaction_history_title_total_haloki_acc.
+  ///
+  /// In en, this message translates to:
+  /// **'Total to Haloki account'**
+  String get transaction_history_title_total_haloki_acc;
+
+  /// No description provided for @transaction_history_title_transfer_amount.
+  ///
+  /// In en, this message translates to:
+  /// **'Transfer amount'**
+  String get transaction_history_title_transfer_amount;
+
+  /// No description provided for @transaction_history_title_exchange_rate.
+  ///
+  /// In en, this message translates to:
+  /// **'Exchange rate'**
+  String get transaction_history_title_exchange_rate;
+
+  /// No description provided for @transaction_history_title_total_to_receiver.
+  ///
+  /// In en, this message translates to:
+  /// **'Total to receiver'**
+  String get transaction_history_title_total_to_receiver;
+
+  /// No description provided for @transaction_history_title_no_transaction_yet.
+  ///
+  /// In en, this message translates to:
+  /// **'No transaction yet'**
+  String get transaction_history_title_no_transaction_yet;
+
+  /// No description provided for @transaction_history_title_transaction_detail.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction detail'**
+  String get transaction_history_title_transaction_detail;
+
+  /// No description provided for @transaction_history_title_filter_send_money.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter send money'**
+  String get transaction_history_title_filter_send_money;
+
+  /// No description provided for @transaction_history_title_filter_transfer_money.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter transfer money'**
+  String get transaction_history_title_filter_transfer_money;
+
+  /// No description provided for @transaction_history_title_status_all.
+  ///
+  /// In en, this message translates to:
+  /// **'All'**
+  String get transaction_history_title_status_all;
+
+  /// No description provided for @transaction_history_title_status_processing.
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get transaction_history_title_status_processing;
+
+  /// No description provided for @transaction_history_title_status_success.
+  ///
+  /// In en, this message translates to:
+  /// **'Success'**
+  String get transaction_history_title_status_success;
+
+  /// No description provided for @transaction_history_title_status_cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get transaction_history_title_status_cancel;
+
+  /// No description provided for @transaction_history_title_status_denied.
+  ///
+  /// In en, this message translates to:
+  /// **'Denied'**
+  String get transaction_history_title_status_denied;
+
+  /// No description provided for @transaction_history_title_status_failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed'**
+  String get transaction_history_title_status_failed;
+
+  /// No description provided for @transaction_history_title_action_btn_retry.
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get transaction_history_title_action_btn_retry;
+
+  /// No description provided for @transaction_history_filter_title_date_to.
+  ///
+  /// In en, this message translates to:
+  /// **'To'**
+  String get transaction_history_filter_title_date_to;
+
+  /// No description provided for @transaction_history_filter_title_date_from.
+  ///
+  /// In en, this message translates to:
+  /// **'From'**
+  String get transaction_history_filter_title_date_from;
+
+  /// No description provided for @transaction_history_title_action_btn_filter.
+  ///
+  /// In en, this message translates to:
+  /// **'Filter'**
+  String get transaction_history_title_action_btn_filter;
+
+  /// No description provided for @transaction_history_title_action_btn_reset.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset'**
+  String get transaction_history_title_action_btn_reset;
+
+  /// No description provided for @transaction_history_title_action_btn_close.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get transaction_history_title_action_btn_close;
+
+  /// No description provided for @transaction_history_title_dialog_status.
+  ///
+  /// In en, this message translates to:
+  /// **'Status send money history option?'**
+  String get transaction_history_title_dialog_status;
+
+  /// No description provided for @transaction_history_define_processing.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction has been confirmed. We are processing your transaction.'**
+  String get transaction_history_define_processing;
+
+  /// No description provided for @transaction_history_define_success.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction has been completed successfully.'**
+  String get transaction_history_define_success;
+
+  /// No description provided for @transaction_history_define_cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'You have cancelled this transaction. All funds will be reversed.'**
+  String get transaction_history_define_cancel;
+
+  /// No description provided for @transaction_history_define_denied.
+  ///
+  /// In en, this message translates to:
+  /// **'Your transaction request has been declined. Please view transaction details or contact our customer support for further information.'**
+  String get transaction_history_define_denied;
+
+  /// No description provided for @transaction_history_define_failed.
+  ///
+  /// In en, this message translates to:
+  /// **'Transaction has failed. All funds will be reversed. Please view transaction details or contact our customer support for further information.'**
+  String get transaction_history_define_failed;
+
+  /// No description provided for @transaction_history_sub_content_no_transaction_yet.
+  ///
+  /// In en, this message translates to:
+  /// **'Start transacting with your Haloki. All transactions made will be displayed here'**
+  String get transaction_history_sub_content_no_transaction_yet;
+
+  /// No description provided for @sign_title_welcome.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome Haloki'**
+  String get sign_title_welcome;
+
+  /// No description provided for @sign_in.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign in'**
+  String get sign_in;
+
+  /// No description provided for @sign_enter_email_or_number.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get sign_enter_email_or_number;
+
+  /// No description provided for @sign_enter_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get sign_enter_password;
+
+  /// No description provided for @sign_forgot_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot password?'**
+  String get sign_forgot_password;
+
+  /// No description provided for @sign_do_not_have_an_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account?'**
+  String get sign_do_not_have_an_account;
+
+  /// No description provided for @sign_up.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up'**
+  String get sign_up;
+
+  /// No description provided for @sign_up_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get sign_up_title;
+
+  /// No description provided for @sign_up_first_name.
+  ///
+  /// In en, this message translates to:
+  /// **'First name'**
+  String get sign_up_first_name;
+
+  /// No description provided for @sign_up_last_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name'**
+  String get sign_up_last_name;
+
+  /// No description provided for @sign_confirm_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password'**
+  String get sign_confirm_password;
+
+  /// No description provided for @sign_back.
+  ///
+  /// In en, this message translates to:
+  /// **'Back'**
+  String get sign_back;
+
+  /// No description provided for @sign_text_policy.
+  ///
+  /// In en, this message translates to:
+  /// **'By clicking Sign Up, you confirm that you are over 18 and you agree to our '**
+  String get sign_text_policy;
+
+  /// No description provided for @sign_term_of_Service.
+  ///
+  /// In en, this message translates to:
+  /// **'Term of Service'**
+  String get sign_term_of_Service;
+
+  /// No description provided for @sign_data_policy.
+  ///
+  /// In en, this message translates to:
+  /// **'Data Policy'**
+  String get sign_data_policy;
+
+  /// No description provided for @sign_cookies_policy.
+  ///
+  /// In en, this message translates to:
+  /// **'Cookies Policy'**
+  String get sign_cookies_policy;
+
+  /// No description provided for @sign_and.
+  ///
+  /// In en, this message translates to:
+  /// **'and'**
+  String get sign_and;
+
+  /// No description provided for @sign_community_standards.
+  ///
+  /// In en, this message translates to:
+  /// **'Community Standards'**
+  String get sign_community_standards;
+
+  /// No description provided for @sign_in_error_login_message.
+  ///
+  /// In en, this message translates to:
+  /// **'The login information provided does not match any accounts. Please try again'**
+  String get sign_in_error_login_message;
+
+  /// No description provided for @sign_in_error_login_negative.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get sign_in_error_login_negative;
+
+  /// No description provided for @sign_up_account_blocked.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has been blocked! We noticed some unusual activities on your account. To help protect you from fraud or abuse, we\\\'ve temporarily blocked this account.'**
+  String get sign_up_account_blocked;
+
+  /// No description provided for @sign_up_birthday_format.
+  ///
+  /// In en, this message translates to:
+  /// **'%3s–%2s–%1s'**
+  String get sign_up_birthday_format;
+
+  /// No description provided for @sign_up_notify_account_exist.
+  ///
+  /// In en, this message translates to:
+  /// **'The account already exists, please use another phone number or email.'**
+  String get sign_up_notify_account_exist;
+
+  /// No description provided for @sign_up_password_length_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 6 characters'**
+  String get sign_up_password_length_error;
+
+  /// No description provided for @sign_up_password_length_more_128_error.
+  ///
+  /// In en, this message translates to:
+  /// **'The maximum limit of Password is 128 characters'**
+  String get sign_up_password_length_more_128_error;
+
+  /// No description provided for @sign_up_first_name_Invalid_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid first name'**
+  String get sign_up_first_name_Invalid_error;
+
+  /// No description provided for @sign_up_last_name_Invalid_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid last name'**
+  String get sign_up_last_name_Invalid_error;
+
+  /// No description provided for @sign_up_login_handler_button0.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get sign_up_login_handler_button0;
+
+  /// No description provided for @validate_empty.
+  ///
+  /// In en, this message translates to:
+  /// **'Field require'**
+  String get validate_empty;
+
+  /// No description provided for @validate_confirm_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password does not match'**
+  String get validate_confirm_password;
+
+  /// No description provided for @validate_format.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid format'**
+  String get validate_format;
+
+  /// No description provided for @validate_format_email.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email'**
+  String get validate_format_email;
+
+  /// No description provided for @validate_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password so easy'**
+  String get validate_password;
+
+  /// No description provided for @validate_last_name_require.
+  ///
+  /// In en, this message translates to:
+  /// **'Last name is require'**
+  String get validate_last_name_require;
+
+  /// No description provided for @validate_first_name_require.
+  ///
+  /// In en, this message translates to:
+  /// **'First name is require'**
+  String get validate_first_name_require;
+
+  /// No description provided for @validate_email_require_for_search.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter your email'**
+  String get validate_email_require_for_search;
+
+  /// No description provided for @error_unauthorized_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Your login session has expired. Please log in again'**
+  String get error_unauthorized_message;
+
+  /// No description provided for @error_unauthorized_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Authentication failed'**
+  String get error_unauthorized_title;
+
+  /// No description provided for @error_unauthorized_content_message.
+  ///
+  /// In en, this message translates to:
+  /// **'The login information provided does not match any accounts. Please try again'**
+  String get error_unauthorized_content_message;
+
+  /// No description provided for @error_code_network_connection.
+  ///
+  /// In en, this message translates to:
+  /// **'SocketException: Network connection error'**
+  String get error_code_network_connection;
+
+  /// No description provided for @error_common.
+  ///
+  /// In en, this message translates to:
+  /// **'An error occurred. Please try again'**
+  String get error_common;
+
+  /// No description provided for @error_network_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Network failed'**
+  String get error_network_title;
+
+  /// No description provided for @error_network_content_message.
+  ///
+  /// In en, this message translates to:
+  /// **'Network connection is interrupted. Please check your internet connection.'**
+  String get error_network_content_message;
+
+  /// No description provided for @error_password_inconrect.
+  ///
+  /// In en, this message translates to:
+  /// **'Current password is incorrect.'**
+  String get error_password_inconrect;
+
+  /// No description provided for @error_message_sign_up.
+  ///
+  /// In en, this message translates to:
+  /// **'The account already exists, please use another email'**
+  String get error_message_sign_up;
+
+  /// No description provided for @error_title_sign_up.
+  ///
+  /// In en, this message translates to:
+  /// **'Sign up failure'**
+  String get error_title_sign_up;
+
+  /// No description provided for @error_acc_inconrect.
+  ///
+  /// In en, this message translates to:
+  /// **'We are unable to find your Haloki Account. Please contact customer support for more details.'**
+  String get error_acc_inconrect;
+
+  /// No description provided for @error_message_acc_blocked.
+  ///
+  /// In en, this message translates to:
+  /// **'This account has been blocked! We noticed some unusual activities on your account. To help protect you from fraud or abuse, we\'ve temporarily blocked this account.'**
+  String get error_message_acc_blocked;
+
+  /// No description provided for @message_error_network_connection.
+  ///
+  /// In en, this message translates to:
+  /// **'The connection is being interrupted. Please check the connection again'**
+  String get message_error_network_connection;
+
+  /// No description provided for @setting_update_password_fail.
+  ///
+  /// In en, this message translates to:
+  /// **'Update password failure. Please try again later'**
+  String get setting_update_password_fail;
+
+  /// No description provided for @setting_account_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Account password'**
+  String get setting_account_password;
+
+  /// No description provided for @setting_account_password_description.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s a good idea to use a password that you haven\'t used elsewhere'**
+  String get setting_account_password_description;
+
+  /// No description provided for @setting_email_verify.
+  ///
+  /// In en, this message translates to:
+  /// **'The email address Haloki will use to verify your activities.'**
+  String get setting_email_verify;
+
+  /// No description provided for @setting_email_verify_description.
+  ///
+  /// In en, this message translates to:
+  /// **'Email for verification'**
+  String get setting_email_verify_description;
+
+  /// No description provided for @setting_delete_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete account'**
+  String get setting_delete_account;
+
+  /// No description provided for @setting_delete_account_description.
+  ///
+  /// In en, this message translates to:
+  /// **'When you delete your Haloki account, you won’t be able to restore or access your Haloki account.'**
+  String get setting_delete_account_description;
+
+  /// No description provided for @setting_delete_account_learn_more.
+  ///
+  /// In en, this message translates to:
+  /// **'Learn more about what happens when I delete my account.'**
+  String get setting_delete_account_learn_more;
+
+  /// No description provided for @setting_change_pass_success.
+  ///
+  /// In en, this message translates to:
+  /// **'You have successfully changed your password'**
+  String get setting_change_pass_success;
+
+  /// No description provided for @setting_change_pass_incorrect_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Incorrect password'**
+  String get setting_change_pass_incorrect_pass;
+
+  /// No description provided for @setting_change_pass_same_pas.
+  ///
+  /// In en, this message translates to:
+  /// **'New password is same as old password'**
+  String get setting_change_pass_same_pas;
+
+  /// No description provided for @setting_change_pass_wrong_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password is wrong'**
+  String get setting_change_pass_wrong_pass;
+
+  /// No description provided for @something_went_wrong.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong. Please try again later'**
+  String get something_went_wrong;
+
+  /// No description provided for @setting_changed_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Changed password'**
+  String get setting_changed_pass;
+
+  /// No description provided for @setting_change_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Change password'**
+  String get setting_change_pass;
+
+  /// No description provided for @setting_change_pass_fail.
+  ///
+  /// In en, this message translates to:
+  /// **'Change password failed'**
+  String get setting_change_pass_fail;
+
+  /// No description provided for @setting_updated_info.
+  ///
+  /// In en, this message translates to:
+  /// **'Updated information'**
+  String get setting_updated_info;
+
+  /// No description provided for @setting_updated_info_success.
+  ///
+  /// In en, this message translates to:
+  /// **'Your information has been successfully updated'**
+  String get setting_updated_info_success;
+
+  /// No description provided for @setting_current_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Current password'**
+  String get setting_current_pass;
+
+  /// No description provided for @setting_enter_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter password here'**
+  String get setting_enter_pass;
+
+  /// No description provided for @setting_new_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'New password'**
+  String get setting_new_pass;
+
+  /// No description provided for @setting_confirm_pass.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm new password'**
+  String get setting_confirm_pass;
+
+  /// No description provided for @delete_account_zero.
+  ///
+  /// In en, this message translates to:
+  /// **'Important notices when you deleted your account:'**
+  String get delete_account_zero;
+
+  /// No description provided for @delete_account_line_one.
+  ///
+  /// In en, this message translates to:
+  /// **'When you finish the account deletion process, you will {not} be able to sign in using this account.'**
+  String get delete_account_line_one;
+
+  /// No description provided for @delete_account_line_two.
+  ///
+  /// In en, this message translates to:
+  /// **'You will {not} be able to reopen your deleted account.'**
+  String get delete_account_line_two;
+
+  /// No description provided for @delete_account_line_three.
+  ///
+  /// In en, this message translates to:
+  /// **'Please ensure that you have cancelled any unwanted processing transaction before deleting your account.'**
+  String get delete_account_line_three;
+
+  /// No description provided for @delete_account_line_four.
+  ///
+  /// In en, this message translates to:
+  /// **'To have your {haloki} balance refunded, please submit a refund request. For more information about refunding your {haloki} balance, please visit {help} and look for Cancellation and Refund topic.'**
+  String get delete_account_line_four;
+
+  /// No description provided for @delete_account_line_five.
+  ///
+  /// In en, this message translates to:
+  /// **'If you want to open a different {haloki} account, you will be able to use the same credential as your deleted account.'**
+  String get delete_account_line_five;
+
+  /// No description provided for @find_your_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Find your account'**
+  String get find_your_account;
+
+  /// No description provided for @please_enter_email.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter your email to search your account.'**
+  String get please_enter_email;
+
+  /// No description provided for @enter_email.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter email'**
+  String get enter_email;
+
+  /// No description provided for @confirm_your_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm your account'**
+  String get confirm_your_account;
+
+  /// No description provided for @send_otp_recover.
+  ///
+  /// In en, this message translates to:
+  /// **'We will send you a confirmation code before you reset a new password'**
+  String get send_otp_recover;
+
+  /// No description provided for @confirm_via_email.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm via email'**
+  String get confirm_via_email;
+
+  /// No description provided for @enter_your_code.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter the code we sent to'**
+  String get enter_your_code;
+
+  /// No description provided for @not_yet_received_code.
+  ///
+  /// In en, this message translates to:
+  /// **'You have not received a confirmation code yet?'**
+  String get not_yet_received_code;
+
+  /// No description provided for @reset_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset password'**
+  String get reset_password;
+
+  /// No description provided for @please_enter_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a new password'**
+  String get please_enter_password;
+
+  /// No description provided for @enter_new_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter new password'**
+  String get enter_new_password;
+
+  /// No description provided for @re_enter_new_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Re-enter new password'**
+  String get re_enter_new_password;
+
+  /// No description provided for @account_recovered_title.
+  ///
+  /// In en, this message translates to:
+  /// **'Account recovered'**
+  String get account_recovered_title;
+
+  /// No description provided for @account_recovered_content.
+  ///
+  /// In en, this message translates to:
+  /// **'You have recovered your account successfully.'**
+  String get account_recovered_content;
+
+  /// No description provided for @validate_email_require.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required'**
+  String get validate_email_require;
+
+  /// No description provided for @validate_password_require.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is required'**
+  String get validate_password_require;
+
+  /// No description provided for @validate_confirm_password_require.
+  ///
+  /// In en, this message translates to:
+  /// **'Password confirmation is required'**
+  String get validate_confirm_password_require;
+
+  /// No description provided for @common_personal.
+  ///
+  /// In en, this message translates to:
+  /// **'Personal'**
+  String get common_personal;
+
+  /// No description provided for @common_account_type.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Type'**
+  String get common_account_type;
+
+  /// No description provided for @common_address.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get common_address;
+
+  /// No description provided for @common_gender.
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get common_gender;
+
+  /// No description provided for @common_full_name.
+  ///
+  /// In en, this message translates to:
+  /// **'Full name'**
+  String get common_full_name;
+
+  /// No description provided for @common_unknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown'**
+  String get common_unknown;
+
+  /// No description provided for @validate_max_length.
+  ///
+  /// In en, this message translates to:
+  /// **'The maximum length of the {fieldName} is {number} characters.'**
+  String validate_max_length(String fieldName, int number);
+
   /// No description provided for @common_try_again.
   ///
   /// In en, this message translates to:
@@ -308,42 +1658,6 @@ abstract class Str {
   /// In en, this message translates to:
   /// **'Postpaid'**
   String get common_postpaid;
-
-  /// No description provided for @common_personal.
-  ///
-  /// In en, this message translates to:
-  /// **'Personal'**
-  String get common_personal;
-
-  /// No description provided for @common_account_type.
-  ///
-  /// In en, this message translates to:
-  /// **'Account Type'**
-  String get common_account_type;
-
-  /// No description provided for @common_address.
-  ///
-  /// In en, this message translates to:
-  /// **'Address'**
-  String get common_address;
-
-  /// No description provided for @common_gender.
-  ///
-  /// In en, this message translates to:
-  /// **'Gender'**
-  String get common_gender;
-
-  /// No description provided for @common_full_name.
-  ///
-  /// In en, this message translates to:
-  /// **'Full name'**
-  String get common_full_name;
-
-  /// No description provided for @common_unknown.
-  ///
-  /// In en, this message translates to:
-  /// **'Unknown'**
-  String get common_unknown;
 
   /// No description provided for @common_yes.
   ///
@@ -639,6 +1953,18 @@ abstract class Str {
   /// **'Amount'**
   String get amount;
 
+  /// No description provided for @confirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm'**
+  String get confirm;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
   /// No description provided for @review.
   ///
   /// In en, this message translates to:
@@ -740,6 +2066,36 @@ abstract class Str {
   /// In en, this message translates to:
   /// **'to your Haloki account within the next 5 business days.'**
   String get amount_descriptions_trailing;
+
+  /// No description provided for @send_money_error_3000.
+  ///
+  /// In en, this message translates to:
+  /// **'You have exceeded your annual transaction limit of 1000 USD per year.'**
+  String get send_money_error_3000;
+
+  /// No description provided for @send_money_error_3019.
+  ///
+  /// In en, this message translates to:
+  /// **'The linked bank account does not exist or could not be accessed. Please contact your bank customer support for more details.'**
+  String get send_money_error_3019;
+
+  /// No description provided for @send_money_error_3001_1.
+  ///
+  /// In en, this message translates to:
+  /// **'The sending amount must be from'**
+  String get send_money_error_3001_1;
+
+  /// No description provided for @send_money_error_3001_2.
+  ///
+  /// In en, this message translates to:
+  /// **'to'**
+  String get send_money_error_3001_2;
+
+  /// No description provided for @send_money_error_2010.
+  ///
+  /// In en, this message translates to:
+  /// **'The sending amount is smaller than the minimum fee. Please choose a larger amount to send.'**
+  String get send_money_error_2010;
 
   /// No description provided for @confirmation_body_leading.
   ///
@@ -1047,24 +2403,6 @@ abstract class Str {
   /// **'Account'**
   String get account;
 
-  /// No description provided for @resend_code.
-  ///
-  /// In en, this message translates to:
-  /// **'Resend code'**
-  String get resend_code;
-
-  /// No description provided for @a_few_minutes.
-  ///
-  /// In en, this message translates to:
-  /// **'a few minutes'**
-  String get a_few_minutes;
-
-  /// No description provided for @a_day.
-  ///
-  /// In en, this message translates to:
-  /// **'24 hours'**
-  String get a_day;
-
   /// No description provided for @verify_your_information.
   ///
   /// In en, this message translates to:
@@ -1094,216 +2432,6 @@ abstract class Str {
   /// In en, this message translates to:
   /// **'Link your bank account to start making transaction.'**
   String get bank_account_link_bank_warn;
-
-  /// No description provided for @sign_title_welcome.
-  ///
-  /// In en, this message translates to:
-  /// **'Welcome Haloki'**
-  String get sign_title_welcome;
-
-  /// No description provided for @sign_in.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in'**
-  String get sign_in;
-
-  /// No description provided for @sign_enter_email_or_number.
-  ///
-  /// In en, this message translates to:
-  /// **'Email'**
-  String get sign_enter_email_or_number;
-
-  /// No description provided for @sign_enter_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Password'**
-  String get sign_enter_password;
-
-  /// No description provided for @sign_forgot_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Forgot password?'**
-  String get sign_forgot_password;
-
-  /// No description provided for @sign_do_not_have_an_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Don\'t have an account?'**
-  String get sign_do_not_have_an_account;
-
-  /// No description provided for @sign_up.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign up'**
-  String get sign_up;
-
-  /// No description provided for @sign_up_title.
-  ///
-  /// In en, this message translates to:
-  /// **'Create Account'**
-  String get sign_up_title;
-
-  /// No description provided for @sign_up_first_name.
-  ///
-  /// In en, this message translates to:
-  /// **'First name'**
-  String get sign_up_first_name;
-
-  /// No description provided for @sign_up_last_name.
-  ///
-  /// In en, this message translates to:
-  /// **'Last name'**
-  String get sign_up_last_name;
-
-  /// No description provided for @sign_confirm_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm password'**
-  String get sign_confirm_password;
-
-  /// No description provided for @sign_back.
-  ///
-  /// In en, this message translates to:
-  /// **'Back'**
-  String get sign_back;
-
-  /// No description provided for @sign_text_policy.
-  ///
-  /// In en, this message translates to:
-  /// **'By clicking Sign Up, you confirm that you are over 18 and you agree to our '**
-  String get sign_text_policy;
-
-  /// No description provided for @sign_term_of_Service.
-  ///
-  /// In en, this message translates to:
-  /// **'Term of Service'**
-  String get sign_term_of_Service;
-
-  /// No description provided for @sign_data_policy.
-  ///
-  /// In en, this message translates to:
-  /// **'Data Policy'**
-  String get sign_data_policy;
-
-  /// No description provided for @sign_cookies_policy.
-  ///
-  /// In en, this message translates to:
-  /// **'Cookies Policy'**
-  String get sign_cookies_policy;
-
-  /// No description provided for @sign_and.
-  ///
-  /// In en, this message translates to:
-  /// **'and'**
-  String get sign_and;
-
-  /// No description provided for @sign_community_standards.
-  ///
-  /// In en, this message translates to:
-  /// **'Community Standards'**
-  String get sign_community_standards;
-
-  /// No description provided for @sign_in_error_login_message.
-  ///
-  /// In en, this message translates to:
-  /// **'The login information provided does not match any accounts. Please try again'**
-  String get sign_in_error_login_message;
-
-  /// No description provided for @sign_in_error_login_negative.
-  ///
-  /// In en, this message translates to:
-  /// **'Try again'**
-  String get sign_in_error_login_negative;
-
-  /// No description provided for @sign_up_account_blocked.
-  ///
-  /// In en, this message translates to:
-  /// **'This account has been blocked! We noticed some unusual activities on your account. To help protect you from fraud or abuse, we\\\'ve temporarily blocked this account.'**
-  String get sign_up_account_blocked;
-
-  /// No description provided for @sign_up_birthday_format.
-  ///
-  /// In en, this message translates to:
-  /// **'%3s–%2s–%1s'**
-  String get sign_up_birthday_format;
-
-  /// No description provided for @sign_up_notify_account_exist.
-  ///
-  /// In en, this message translates to:
-  /// **'The account already exists, please use another phone number or email.'**
-  String get sign_up_notify_account_exist;
-
-  /// No description provided for @sign_up_password_length_error.
-  ///
-  /// In en, this message translates to:
-  /// **'Password must be at least 6 characters'**
-  String get sign_up_password_length_error;
-
-  /// No description provided for @sign_up_password_length_more_128_error.
-  ///
-  /// In en, this message translates to:
-  /// **'The maxiumun limit of Password is 128 characters'**
-  String get sign_up_password_length_more_128_error;
-
-  /// No description provided for @sign_up_first_name_Invalid_error.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid first name'**
-  String get sign_up_first_name_Invalid_error;
-
-  /// No description provided for @sign_up_last_name_Invalid_error.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid last name'**
-  String get sign_up_last_name_Invalid_error;
-
-  /// No description provided for @sign_up_login_handler_button0.
-  ///
-  /// In en, this message translates to:
-  /// **'Already have an account?'**
-  String get sign_up_login_handler_button0;
-
-  /// No description provided for @validate_empty.
-  ///
-  /// In en, this message translates to:
-  /// **'Field require'**
-  String get validate_empty;
-
-  /// No description provided for @validate_confirm_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm password does not match'**
-  String get validate_confirm_password;
-
-  /// No description provided for @validate_format.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid format'**
-  String get validate_format;
-
-  /// No description provided for @validate_format_email.
-  ///
-  /// In en, this message translates to:
-  /// **'Invalid email'**
-  String get validate_format_email;
-
-  /// No description provided for @validate_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Password so easy'**
-  String get validate_password;
-
-  /// No description provided for @validate_max_length.
-  ///
-  /// In en, this message translates to:
-  /// **'The maximum length of the {fieldName} is {number} characters.'**
-  String validate_max_length(String fieldName, int number);
-
-  /// No description provided for @validate_required.
-  ///
-  /// In en, this message translates to:
-  /// **'{fieldName} is required'**
-  String validate_required(String fieldName);
 
   /// No description provided for @account_edit_information.
   ///
@@ -1515,881 +2643,29 @@ abstract class Str {
   /// **'Middle name'**
   String get account_label_field_middle_name;
 
-  /// No description provided for @text_language.
+  /// No description provided for @account_notifier_err_edit_information.
   ///
   /// In en, this message translates to:
-  /// **'Language'**
-  String get text_language;
+  /// **'Please check the information again'**
+  String get account_notifier_err_edit_information;
 
-  /// No description provided for @select_language.
+  /// No description provided for @account_cancel_edit_information.
   ///
   /// In en, this message translates to:
-  /// **'Select Language'**
-  String get select_language;
+  /// **'Cancel edit information'**
+  String get account_cancel_edit_information;
 
-  /// No description provided for @permission_denied_title.
+  /// No description provided for @account_cancel_edit_information_content.
   ///
   /// In en, this message translates to:
-  /// **'Permission denied'**
-  String get permission_denied_title;
+  /// **'All unsaved information will be lost. Are you sure you want to leave?'**
+  String get account_cancel_edit_information_content;
 
-  /// No description provided for @permission_denied_content.
+  /// No description provided for @boarding_learn_more.
   ///
   /// In en, this message translates to:
-  /// **'permission was denied, but is needed for core functionality'**
-  String get permission_denied_content;
-
-  /// No description provided for @recent_transactions.
-  ///
-  /// In en, this message translates to:
-  /// **'Recent transactions'**
-  String get recent_transactions;
-
-  /// No description provided for @view_all.
-  ///
-  /// In en, this message translates to:
-  /// **'View all'**
-  String get view_all;
-
-  /// No description provided for @no_transaction.
-  ///
-  /// In en, this message translates to:
-  /// **'No transaction yet'**
-  String get no_transaction;
-
-  /// No description provided for @no_link_bank_account.
-  ///
-  /// In en, this message translates to:
-  /// **'No link bank account'**
-  String get no_link_bank_account;
-
-  /// No description provided for @error_unauthorized_message.
-  ///
-  /// In en, this message translates to:
-  /// **'Your login session has expired. Please log in again'**
-  String get error_unauthorized_message;
-
-  /// No description provided for @error_unauthorized_title.
-  ///
-  /// In en, this message translates to:
-  /// **'Authentication failed'**
-  String get error_unauthorized_title;
-
-  /// No description provided for @error_network_title.
-  ///
-  /// In en, this message translates to:
-  /// **'Network failed'**
-  String get error_network_title;
-
-  /// No description provided for @error_unauthorized_content_message.
-  ///
-  /// In en, this message translates to:
-  /// **'The login informaion provided does not match any accounts. Please try again'**
-  String get error_unauthorized_content_message;
-
-  /// No description provided for @error_network_content_message.
-  ///
-  /// In en, this message translates to:
-  /// **'Network connection is interrupted. Please check your internet connection.'**
-  String get error_network_content_message;
-
-  /// No description provided for @error_code_network_connection.
-  ///
-  /// In en, this message translates to:
-  /// **'SocketException: Network connection error'**
-  String get error_code_network_connection;
-
-  /// No description provided for @error_common.
-  ///
-  /// In en, this message translates to:
-  /// **'An error occurred. Please try again'**
-  String get error_common;
-
-  /// No description provided for @message_error_network_connection.
-  ///
-  /// In en, this message translates to:
-  /// **'The connection is being interrupted. Please check the connection again'**
-  String get message_error_network_connection;
-
-  /// No description provided for @password_star.
-  ///
-  /// In en, this message translates to:
-  /// **'Password*'**
-  String get password_star;
-
-  /// No description provided for @enter_verification_code.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter a verification code'**
-  String get enter_verification_code;
-
-  /// No description provided for @verification_code_has_been_sent.
-  ///
-  /// In en, this message translates to:
-  /// **'A verification code has been sent  to your email'**
-  String get verification_code_has_been_sent;
-
-  /// No description provided for @delete_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Delete account'**
-  String get delete_account;
-
-  /// No description provided for @account_delete_title.
-  ///
-  /// In en, this message translates to:
-  /// **'Account deleted'**
-  String get account_delete_title;
-
-  /// No description provided for @account_delete_content.
-  ///
-  /// In en, this message translates to:
-  /// **'You have deleted your account successfully.'**
-  String get account_delete_content;
-
-  /// No description provided for @enter_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter password'**
-  String get enter_password;
-
-  /// No description provided for @password_incorrect.
-  ///
-  /// In en, this message translates to:
-  /// **'The password is incorrect'**
-  String get password_incorrect;
-
-  /// No description provided for @complete_two_step_delete_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Complete 2 steps below to delete your account'**
-  String get complete_two_step_delete_account;
-
-  /// No description provided for @find_your_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Find your account'**
-  String get find_your_account;
-
-  /// No description provided for @please_enter_email.
-  ///
-  /// In en, this message translates to:
-  /// **'Please enter your email to search your account.'**
-  String get please_enter_email;
-
-  /// No description provided for @enter_email.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter email'**
-  String get enter_email;
-
-  /// No description provided for @confirm_your_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm your account'**
-  String get confirm_your_account;
-
-  /// No description provided for @send_otp_recover.
-  ///
-  /// In en, this message translates to:
-  /// **'We will send you a confirmation code before you reset a new password'**
-  String get send_otp_recover;
-
-  /// No description provided for @confirm_via_email.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm via email'**
-  String get confirm_via_email;
-
-  /// No description provided for @enter_your_code.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter the code we sent to'**
-  String get enter_your_code;
-
-  /// No description provided for @not_yet_received_code.
-  ///
-  /// In en, this message translates to:
-  /// **'You have not received a confirmation code yet?'**
-  String get not_yet_received_code;
-
-  /// No description provided for @reset_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Reset password'**
-  String get reset_password;
-
-  /// No description provided for @please_enter_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Please enter a new password'**
-  String get please_enter_password;
-
-  /// No description provided for @enter_new_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter new password'**
-  String get enter_new_password;
-
-  /// No description provided for @re_enter_new_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Re-enter new password'**
-  String get re_enter_new_password;
-
-  /// No description provided for @account_recovered_title.
-  ///
-  /// In en, this message translates to:
-  /// **'Account recovered'**
-  String get account_recovered_title;
-
-  /// No description provided for @account_recovered_content.
-  ///
-  /// In en, this message translates to:
-  /// **'You have recovered your account successfully.'**
-  String get account_recovered_content;
-
-  /// No description provided for @validate_email_require.
-  ///
-  /// In en, this message translates to:
-  /// **'Email is required'**
-  String get validate_email_require;
-
-  /// No description provided for @validate_password_require.
-  ///
-  /// In en, this message translates to:
-  /// **'Password is required'**
-  String get validate_password_require;
-
-  /// No description provided for @validate_confirm_password_require.
-  ///
-  /// In en, this message translates to:
-  /// **'Password confirmation is required'**
-  String get validate_confirm_password_require;
-
-  /// No description provided for @validate_last_name_require.
-  ///
-  /// In en, this message translates to:
-  /// **'Last name is require'**
-  String get validate_last_name_require;
-
-  /// No description provided for @validate_first_name_require.
-  ///
-  /// In en, this message translates to:
-  /// **'First name is require'**
-  String get validate_first_name_require;
-
-  /// No description provided for @validate_email_require_for_search.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter your email'**
-  String get validate_email_require_for_search;
-
-  /// No description provided for @verify_error_common.
-  ///
-  /// In en, this message translates to:
-  /// **'The verification code is incorrect'**
-  String get verify_error_common;
-
-  /// No description provided for @verify_error_waiting_minutes.
-  ///
-  /// In en, this message translates to:
-  /// **'You have just requested a verification code. Please wait a few minutes before trying again.'**
-  String get verify_error_waiting_minutes;
-
-  /// No description provided for @verify_error_waiting_24h.
-  ///
-  /// In en, this message translates to:
-  /// **'You have requested for new verification code too many times. Please wait 24 hours before trying again.'**
-  String get verify_error_waiting_24h;
-
-  /// No description provided for @verify_error_code_is_expired.
-  ///
-  /// In en, this message translates to:
-  /// **'Your verification code has been expired. Please choose \"resend code\" to recieve a new verification code.'**
-  String get verify_error_code_is_expired;
-
-  /// No description provided for @verify_error_invalid_value.
-  ///
-  /// In en, this message translates to:
-  /// **'There has been an unexpected error. Please try again.'**
-  String get verify_error_invalid_value;
-
-  /// No description provided for @verify_error_max_verified.
-  ///
-  /// In en, this message translates to:
-  /// **'You have attempted to enter the verification code too many times. You will not be able to enter the verification code again.'**
-  String get verify_error_max_verified;
-
-  /// No description provided for @verify_request_many_times.
-  ///
-  /// In en, this message translates to:
-  /// **'You have request a verification code too many times. Please wait before trying again after '**
-  String get verify_request_many_times;
-
-  /// No description provided for @verify_expire.
-  ///
-  /// In en, this message translates to:
-  /// **'The verification code will expire in 05:00'**
-  String get verify_expire;
-
-  /// No description provided for @verify_no_receive.
-  ///
-  /// In en, this message translates to:
-  /// **'Didn’t receive the verification code'**
-  String get verify_no_receive;
-
-  /// No description provided for @verify_wrong_code_many_time.
-  ///
-  /// In en, this message translates to:
-  /// **'You have entered the wrong code too many times.'**
-  String get verify_wrong_code_many_time;
-
-  /// No description provided for @verify_only_number.
-  ///
-  /// In en, this message translates to:
-  /// **'Only Number are allowed'**
-  String get verify_only_number;
-
-  /// No description provided for @verification_code_sent.
-  ///
-  /// In en, this message translates to:
-  /// **'A verification code has been sent to your email :\n'**
-  String get verification_code_sent;
-
-  /// No description provided for @verification_code_required.
-  ///
-  /// In en, this message translates to:
-  /// **'Verification code is required'**
-  String get verification_code_required;
-
-  /// No description provided for @minimum_limit_of_verification_code.
-  ///
-  /// In en, this message translates to:
-  /// **'The minimum limit of Verification code is 6 character'**
-  String get minimum_limit_of_verification_code;
-
-  /// No description provided for @verify_sent.
-  ///
-  /// In en, this message translates to:
-  /// **'We\'ve just sent you a verification code to {emailOrPhone}. Please check your message and enter the code you received.'**
-  String verify_sent(String emailOrPhone);
-
-  /// No description provided for @request_verification_code.
-  ///
-  /// In en, this message translates to:
-  /// **'You have just request a verification code. Please wait {aFewMinutesOr24Hours} before trying again after '**
-  String request_verification_code(String aFewMinutesOr24Hours);
-
-  /// No description provided for @please_try_again.
-  ///
-  /// In en, this message translates to:
-  /// **'Please try again in {timeWaiting}'**
-  String please_try_again(String timeWaiting);
-
-  /// No description provided for @delete_account_zero.
-  ///
-  /// In en, this message translates to:
-  /// **'Important notices when you deleted your account:'**
-  String get delete_account_zero;
-
-  /// No description provided for @delete_account_line_one.
-  ///
-  /// In en, this message translates to:
-  /// **'When you finish the account deletion process, you will {not} be able to sign in using this account.'**
-  String get delete_account_line_one;
-
-  /// No description provided for @delete_account_line_two.
-  ///
-  /// In en, this message translates to:
-  /// **'You will {not} be able to reopen your deleted account.'**
-  String get delete_account_line_two;
-
-  /// No description provided for @delete_account_line_three.
-  ///
-  /// In en, this message translates to:
-  /// **'Please ensure that you have cancelled any unwanted processing transaction before deleting your account.'**
-  String get delete_account_line_three;
-
-  /// No description provided for @delete_account_line_four.
-  ///
-  /// In en, this message translates to:
-  /// **'To have your {haloki} balance refunded, please submit a refund request. For more information about refunding your {haloki} balance, please visit {help} and look for Cancellation and Refund topic.'**
-  String get delete_account_line_four;
-
-  /// No description provided for @delete_account_line_five.
-  ///
-  /// In en, this message translates to:
-  /// **'If you want to open a different {haloki} account, you will be able to use the same credential as your deleted account.'**
-  String get delete_account_line_five;
-
-  /// No description provided for @verify_transaction.
-  ///
-  /// In en, this message translates to:
-  /// **'Verify your transaction'**
-  String get verify_transaction;
-
-  /// No description provided for @complete_transaction.
-  ///
-  /// In en, this message translates to:
-  /// **'Complete 2 steps below to finish your transaction'**
-  String get complete_transaction;
-
-  /// No description provided for @transfer_common.
-  ///
-  /// In en, this message translates to:
-  /// **'Transfer'**
-  String get transfer_common;
-
-  /// No description provided for @transfer_title_status_info.
-  ///
-  /// In en, this message translates to:
-  /// **'Status Information'**
-  String get transfer_title_status_info;
-
-  /// No description provided for @transfer_status_incomplete.
-  ///
-  /// In en, this message translates to:
-  /// **'Incomplete'**
-  String get transfer_status_incomplete;
-
-  /// No description provided for @transfer_content_status_processed.
-  ///
-  /// In en, this message translates to:
-  /// **'Your transaction request are being processed.'**
-  String get transfer_content_status_processed;
-
-  /// No description provided for @transfer_content_status_incomplete.
-  ///
-  /// In en, this message translates to:
-  /// **'You have not confirmed your transaction request.'**
-  String get transfer_content_status_incomplete;
-
-  /// No description provided for @transfer_transaction_question_cancel.
-  ///
-  /// In en, this message translates to:
-  /// **'Do you want to cancel this transaction?'**
-  String get transfer_transaction_question_cancel;
-
-  /// No description provided for @transfer_title_step_1.
-  ///
-  /// In en, this message translates to:
-  /// **'Amount'**
-  String get transfer_title_step_1;
-
-  /// No description provided for @transfer_title_step_2.
-  ///
-  /// In en, this message translates to:
-  /// **'Recipient'**
-  String get transfer_title_step_2;
-
-  /// No description provided for @transfer_title_step_3.
-  ///
-  /// In en, this message translates to:
-  /// **'Review'**
-  String get transfer_title_step_3;
-
-  /// No description provided for @transfer_title_step_4.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirmation'**
-  String get transfer_title_step_4;
-
-  /// No description provided for @transfer_warning_empty_recipients.
-  ///
-  /// In en, this message translates to:
-  /// **'Empty banks Account'**
-  String get transfer_warning_empty_recipients;
-
-  /// No description provided for @transfer_warning_empty_banks.
-  ///
-  /// In en, this message translates to:
-  /// **'Empty banks'**
-  String get transfer_warning_empty_banks;
-
-  /// No description provided for @transfer_menu.
-  ///
-  /// In en, this message translates to:
-  /// **'Transaction menu'**
-  String get transfer_menu;
-
-  /// No description provided for @transfer_cancel_transaction.
-  ///
-  /// In en, this message translates to:
-  /// **'Cancel transaction'**
-  String get transfer_cancel_transaction;
-
-  /// No description provided for @transfer_warning_deleted.
-  ///
-  /// In en, this message translates to:
-  /// **'Incomplete transactions will be deleted after 24 hours'**
-  String get transfer_warning_deleted;
-
-  /// No description provided for @transfer_detail_item_id.
-  ///
-  /// In en, this message translates to:
-  /// **'Transaction ID'**
-  String get transfer_detail_item_id;
-
-  /// No description provided for @transfer_detail_item_time.
-  ///
-  /// In en, this message translates to:
-  /// **'Transaction time'**
-  String get transfer_detail_item_time;
-
-  /// No description provided for @transfer_detail_item_recipient_name.
-  ///
-  /// In en, this message translates to:
-  /// **'Recipient name'**
-  String get transfer_detail_item_recipient_name;
-
-  /// No description provided for @transfer_detail_item_recipient_type.
-  ///
-  /// In en, this message translates to:
-  /// **'Recipient type'**
-  String get transfer_detail_item_recipient_type;
-
-  /// No description provided for @transfer_detail_item_bank_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Bank account'**
-  String get transfer_detail_item_bank_account;
-
-  /// No description provided for @transfer_detail_item_bank_name.
-  ///
-  /// In en, this message translates to:
-  /// **'Bank name'**
-  String get transfer_detail_item_bank_name;
-
-  /// No description provided for @transfer_detail_item_email.
-  ///
-  /// In en, this message translates to:
-  /// **'Email'**
-  String get transfer_detail_item_email;
-
-  /// No description provided for @transfer_detail_item_phone.
-  ///
-  /// In en, this message translates to:
-  /// **'Phone number'**
-  String get transfer_detail_item_phone;
-
-  /// No description provided for @transfer_detail_item_des.
-  ///
-  /// In en, this message translates to:
-  /// **'Description'**
-  String get transfer_detail_item_des;
-
-  /// No description provided for @transfer_detail_item_status.
-  ///
-  /// In en, this message translates to:
-  /// **'Status'**
-  String get transfer_detail_item_status;
-
-  /// No description provided for @transfer_detail_item_amount.
-  ///
-  /// In en, this message translates to:
-  /// **'Amount'**
-  String get transfer_detail_item_amount;
-
-  /// No description provided for @transfer_detail_item_exchange.
-  ///
-  /// In en, this message translates to:
-  /// **'Exchange rate'**
-  String get transfer_detail_item_exchange;
-
-  /// No description provided for @transfer_detail_item_total.
-  ///
-  /// In en, this message translates to:
-  /// **'Total to receiver'**
-  String get transfer_detail_item_total;
-
-  /// No description provided for @transfer_field_choose_country.
-  ///
-  /// In en, this message translates to:
-  /// **'Choose receiver’s country'**
-  String get transfer_field_choose_country;
-
-  /// No description provided for @transfer_warning_step_amount.
-  ///
-  /// In en, this message translates to:
-  /// **'Exchange rate might fluctuate during process'**
-  String get transfer_warning_step_amount;
-
-  /// No description provided for @transfer_warning_err_step_amount_1.
-  ///
-  /// In en, this message translates to:
-  /// **'Your account balance is insufficient for this transaction. Please send money to your Haloki account.'**
-  String get transfer_warning_err_step_amount_1;
-
-  /// No description provided for @transfer_des_regulations.
-  ///
-  /// In en, this message translates to:
-  /// **'Description must be an alphanumeric string with at most 150 characters and must not contain any special characters.'**
-  String get transfer_des_regulations;
-
-  /// No description provided for @transfer_label_btn_save_recipient.
-  ///
-  /// In en, this message translates to:
-  /// **'Save recipient for another transactions'**
-  String get transfer_label_btn_save_recipient;
-
-  /// No description provided for @transfer_label_recipient_bank_name.
-  ///
-  /// In en, this message translates to:
-  /// **'Recipient bank name'**
-  String get transfer_label_recipient_bank_name;
-
-  /// No description provided for @transfer_label_recipient_bank_number.
-  ///
-  /// In en, this message translates to:
-  /// **'Recipient bank account number'**
-  String get transfer_label_recipient_bank_number;
-
-  /// No description provided for @transfer_label_recipient_save.
-  ///
-  /// In en, this message translates to:
-  /// **'Saved recipients'**
-  String get transfer_label_recipient_save;
-
-  /// No description provided for @transfer_label_transaction_amount.
-  ///
-  /// In en, this message translates to:
-  /// **'Transaction amount'**
-  String get transfer_label_transaction_amount;
-
-  /// No description provided for @transfer_amount.
-  ///
-  /// In en, this message translates to:
-  /// **'Transfer amount'**
-  String get transfer_amount;
-
-  /// No description provided for @transfer_label_bank_number.
-  ///
-  /// In en, this message translates to:
-  /// **'bank account number'**
-  String get transfer_label_bank_number;
-
-  /// No description provided for @transfer_recipient_info.
-  ///
-  /// In en, this message translates to:
-  /// **'Recipient information'**
-  String get transfer_recipient_info;
-
-  /// No description provided for @verify_cannot_receive_code.
-  ///
-  /// In en, this message translates to:
-  /// **'Didn\'t get a code?'**
-  String get verify_cannot_receive_code;
-
-  /// No description provided for @verify_caption_email.
-  ///
-  /// In en, this message translates to:
-  /// **'The code has been sent to the email'**
-  String get verify_caption_email;
-
-  /// No description provided for @verify_caption_phone.
-  ///
-  /// In en, this message translates to:
-  /// **'The code has been sent to the phone number'**
-  String get verify_caption_phone;
-
-  /// No description provided for @verify_code_error_count.
-  ///
-  /// In en, this message translates to:
-  /// **'Verification code must be 6 characters'**
-  String get verify_code_error_count;
-
-  /// No description provided for @verify_code_error_incorrect.
-  ///
-  /// In en, this message translates to:
-  /// **'Incorrect verification code'**
-  String get verify_code_error_incorrect;
-
-  /// No description provided for @verify_code_phone_email_caption.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter the code we sent you'**
-  String get verify_code_phone_email_caption;
-
-  /// No description provided for @verify_code_required.
-  ///
-  /// In en, this message translates to:
-  /// **'Verification code is required'**
-  String get verify_code_required;
-
-  /// No description provided for @verify_confirm.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm'**
-  String get verify_confirm;
-
-  /// No description provided for @verify_error_block_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Your account has been locked because the number of attempts to send a code exceeds the specified number of times'**
-  String get verify_error_block_account;
-
-  /// No description provided for @verify_error_code_time_out.
-  ///
-  /// In en, this message translates to:
-  /// **'Verification code has expired'**
-  String get verify_error_code_time_out;
-
-  /// No description provided for @verify_error_wrong_code.
-  ///
-  /// In en, this message translates to:
-  /// **'You entered the wrong code, please check and try again!'**
-  String get verify_error_wrong_code;
-
-  /// No description provided for @verify_input_code_hint.
-  ///
-  /// In en, this message translates to:
-  /// **' Enter the verification code'**
-  String get verify_input_code_hint;
-
-  /// No description provided for @verify_resend_code_caption.
-  ///
-  /// In en, this message translates to:
-  /// **'Did not get the code?'**
-  String get verify_resend_code_caption;
-
-  /// No description provided for @verify_sign_in_another.
-  ///
-  /// In en, this message translates to:
-  /// **'Sign in with a different account'**
-  String get verify_sign_in_another;
-
-  /// No description provided for @setting_update_password_fail.
-  ///
-  /// In en, this message translates to:
-  /// **'Update password failure. Please try again later'**
-  String get setting_update_password_fail;
-
-  /// No description provided for @setting_account_password.
-  ///
-  /// In en, this message translates to:
-  /// **'Account password'**
-  String get setting_account_password;
-
-  /// No description provided for @setting_account_password_description.
-  ///
-  /// In en, this message translates to:
-  /// **'It’s a good idea to use a password that you don’t use else where'**
-  String get setting_account_password_description;
-
-  /// No description provided for @setting_email_verify.
-  ///
-  /// In en, this message translates to:
-  /// **'The email address Haloki will use to verify your activities.'**
-  String get setting_email_verify;
-
-  /// No description provided for @setting_email_verify_description.
-  ///
-  /// In en, this message translates to:
-  /// **'Email for verification'**
-  String get setting_email_verify_description;
-
-  /// No description provided for @setting_delete_account.
-  ///
-  /// In en, this message translates to:
-  /// **'Delete account'**
-  String get setting_delete_account;
-
-  /// No description provided for @setting_delete_account_description.
-  ///
-  /// In en, this message translates to:
-  /// **'When you delete your Haloki account, you won’t be able to restore or access your Haloki account.'**
-  String get setting_delete_account_description;
-
-  /// No description provided for @setting_delete_account_learn_more.
-  ///
-  /// In en, this message translates to:
-  /// **'Learn more about what happen when I delete my account.'**
-  String get setting_delete_account_learn_more;
-
-  /// No description provided for @setting_change_pass_success.
-  ///
-  /// In en, this message translates to:
-  /// **'You have successfully changed your password'**
-  String get setting_change_pass_success;
-
-  /// No description provided for @setting_change_pass_incorrect_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Incorrect password'**
-  String get setting_change_pass_incorrect_pass;
-
-  /// No description provided for @setting_change_pass_same_pas.
-  ///
-  /// In en, this message translates to:
-  /// **'New password is same as old password'**
-  String get setting_change_pass_same_pas;
-
-  /// No description provided for @setting_change_pass_wrong_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm password is wrong'**
-  String get setting_change_pass_wrong_pass;
-
-  /// No description provided for @something_went_wrong.
-  ///
-  /// In en, this message translates to:
-  /// **'Something went wrong. Please try again later'**
-  String get something_went_wrong;
-
-  /// No description provided for @setting_changed_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Changed password'**
-  String get setting_changed_pass;
-
-  /// No description provided for @setting_change_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Change password'**
-  String get setting_change_pass;
-
-  /// No description provided for @setting_change_pass_fail.
-  ///
-  /// In en, this message translates to:
-  /// **'Change password failed'**
-  String get setting_change_pass_fail;
-
-  /// No description provided for @setting_updated_info.
-  ///
-  /// In en, this message translates to:
-  /// **'Updated information'**
-  String get setting_updated_info;
-
-  /// No description provided for @setting_updated_info_success.
-  ///
-  /// In en, this message translates to:
-  /// **'Your information has been successfully updated'**
-  String get setting_updated_info_success;
-
-  /// No description provided for @setting_current_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Current password'**
-  String get setting_current_pass;
-
-  /// No description provided for @setting_enter_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Enter password here'**
-  String get setting_enter_pass;
-
-  /// No description provided for @setting_new_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'New password'**
-  String get setting_new_pass;
-
-  /// No description provided for @setting_confirm_pass.
-  ///
-  /// In en, this message translates to:
-  /// **'Confirm new password'**
-  String get setting_confirm_pass;
+  /// **'Learn more'**
+  String get boarding_learn_more;
 }
 
 class _StrDelegate extends LocalizationsDelegate<Str> {
