@@ -15,7 +15,7 @@
  56, what time are they arriving? -> may gio ho se den?
  57, what time did you get up? ban da thuc day luc may gio
  58, what time did you go to sleep? -> ban da di ngu luc may gio?
- 59, what time did you wake up? -> ban da thuc day luc may gio
+ 59, what time did you wake up? -> ban da tinh giac luc may gio
  60, what time do you think you'll arrive? -> ban nghi ban se den luc may gio?
  61, what time does it start? -> may gio no bat dau?
  62, what time is it -> bay gio la may gio
@@ -26,7 +26,8 @@
  67, when are you leaving -> khi nao ban roi di
  68, when are you moving -> khi nao ban chuyen di
  69, when I went to the store, they didn't have any apples -> khi toi den cua hang, ho k co qua tao nao
- 70, when is the next bus to Daniel? -> chuy
+ 70, when is the next bus to Daniel? -> chuyen xe buyt ke tiep di Daniel la khi nao?
+
 
 
 
